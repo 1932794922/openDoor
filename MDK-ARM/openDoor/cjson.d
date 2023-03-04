@@ -1,0 +1,9 @@
+opendoor\cjson.o: ..\UTILS\cJSON.c
+opendoor\cjson.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+opendoor\cjson.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+opendoor\cjson.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+opendoor\cjson.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+opendoor\cjson.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\float.h
+opendoor\cjson.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
+opendoor\cjson.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+opendoor\cjson.o: ..\UTILS\cJSON.h
