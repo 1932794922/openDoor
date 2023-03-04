@@ -1,0 +1,3 @@
+F:/Electricity/Stm32/openDoor/cmake-build-debug-mingw-stm32/CMakeFiles/openDoor.elf.dir
+F:/Electricity/Stm32/openDoor/cmake-build-debug-mingw-stm32/CMakeFiles/edit_cache.dir
+F:/Electricity/Stm32/openDoor/cmake-build-debug-mingw-stm32/CMakeFiles/rebuild_cache.dir
