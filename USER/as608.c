@@ -632,7 +632,7 @@ uint8_t PS_HandShake(uint32_t *PS_Addr) {
 //功能：解析确认码错误信息返回信息
 //参数: ensure
 const char *EnsureMessage(uint8_t ensure) {
-    const char *p;
+    const static char *p;
 
     switch (ensure) {
         case 0x00:
@@ -735,6 +735,14 @@ void ShowErrMessage(uint8_t ensure) {
     LCD_Fill(0, 100, lcddev.width, 160, BLACK);
     LCD_ShowString(80, 100, (uint8_t *) EnsureMessage(ensure), RED, BLACK); //80,100
     usart_printf(&DEBUG_UART, "%s\r\n", EnsureMessage(ensure));
+    cJSON *data = cJSON_CreateObject();
+    cJSON_AddStringToObject(data, "type", TYPE_FINGERTIP);
+    cJSON_AddStringToObject(data, "message",EnsureMessage(ensure));
+    cJSON_AddNumberToObject(data, "status", 0);
+    char *json_string = cJSON_PrintUnformatted(data);
+    sendMQTTHaveTopic(DEFAULT_PUB_TOPIC, json_string);
+    free(json_string);
+    cJSON_Delete(data);
 }
 
 
@@ -907,6 +915,7 @@ void press_FR(void) {
                 cJSON_AddStringToObject(data, "type", TYPE_FINGERTIP);
                 cJSON_AddNumberToObject(data, "id", seach.pageID);
                 cJSON_AddNumberToObject(data, "score", seach.mathscore);
+                cJSON_AddNumberToObject(data, "status", 1);
                 cJSON_AddStringToObject(data, "message", "open the door");
                 char *json_string = cJSON_PrintUnformatted(data);
                 sendMQTTHaveTopic(DEFAULT_PUB_TOPIC, json_string);

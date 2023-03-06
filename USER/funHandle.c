@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include "lcd.h"
 #include "usartMy.h"
+#include "delay.h"
 
 //开门动作
 void openDoorForMQTT(char *data) {
@@ -18,6 +19,10 @@ void openDoorForMQTT(char *data) {
         usart_printf_dma(&ESP_UART,
                          "%c{\"topic\":\"%s\",\"data\":{\"message\":\"open the door\",\"status\":1,\"type\":\"%s\"}}%c",
                          FRAME_HEAD, DEFAULT_PUB_TOPIC, TYPE_COMMAND,FRAME_TAIL);
+
+        // 延时3秒
+        delay_ms(3000);
+        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET);
     } else if (strcmp(data, "close") == 0) {
         HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET);
         uint8_t str[32];

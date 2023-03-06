@@ -2040,7 +2040,7 @@ CMakeFiles/openDoor.elf.dir/USER/funHandle.c.obj: ../USER/funHandle.c \
   ../USER/usartMy.h \
   ../Core/Inc/usart.h \
   ../Core/Inc/main.h \
-  ../USER/as608.h
+  ../SYSTEM/delay.h
 
 CMakeFiles/openDoor.elf.dir/USER/ui.c.obj: ../USER/ui.c \
   ../USER/ui.h \

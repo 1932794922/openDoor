@@ -116,9 +116,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     {
         a++;
 
-        if (a % 1000 == 0)
+        if (a % 200 == 0)
         {
-          
+            HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_0);
         }
 
     }

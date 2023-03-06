@@ -86,7 +86,6 @@ int main(void)
 
   /* USER CODE BEGIN Init */
     delay_init(180);									//systick初始化
-
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -109,7 +108,6 @@ int main(void)
     /* USER CODE BEGIN 2 */
 
     //usart_printf(&huart1, "AS608指纹模块测试开始\r\n");
-
     HAL_TIM_Base_Start_IT(&htim2); //1ms
     HAL_UART_Receive_IT(&huart1, (uint8_t *)&huart1_buf, 1);
     HAL_UART_Receive_DMA(&huart2, (uint8_t *)&huart2_buf, 1);
@@ -118,6 +116,8 @@ int main(void)
     LCD_Clear(BLACK);//清屏 LIGHTGREEN
     tp_dev.init();	 //触摸屏初始化
     Scheduler_Setup();      //调度器初始化
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET);
+
     if(!as608_init())
     {
        // usart_printf(&huart1, "AS608指纹模块初始化成功\r\n");

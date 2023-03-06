@@ -49,7 +49,6 @@ static void Loop_10Hz(void) //100ms执行一次
 
 static void Loop_5Hz(void) //200ms执行一次
 {
-    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_0);
 }
 
 static void Loop_1Hz(void) //1000ms执行一次
