@@ -1,4 +1,3 @@
-
 #ifndef __AS608HARD_H
 #define __AS608HARD_H
 

@@ -67,9 +67,16 @@ CMakeFiles/openDoor.elf.dir/USER/R.c.obj: \
  d:\progra~1\mingw\gcc-ar~1\arm-none-eabi\include\sys\_locale.h \
  d:\progra~1\mingw\gcc-ar~1\arm-none-eabi\include\strings.h \
  d:\progra~1\mingw\gcc-ar~1\arm-none-eabi\include\sys\string.h \
+ d:\progra~1\mingw\gcc-ar~1\arm-none-eabi\include\malloc.h \
+ d:\progra~1\mingw\gcc-ar~1\arm-none-eabi\include\machine\malloc.h \
  F:\Electricity\Stm32\openDoor\UTILS/cJSON.h \
  F:\Electricity\Stm32\openDoor\USER\usartMy.h \
  F:\Electricity\Stm32\openDoor\Core\Inc/main.h \
  F:\Electricity\Stm32\openDoor\Core\Inc/usart.h \
  F:\Electricity\Stm32\openDoor\Core\Inc/main.h \
- F:\Electricity\Stm32\openDoor\SYSTEM/delay.h
+ F:\Electricity\Stm32\openDoor\USER\funHandle.h \
+ F:\Electricity\Stm32\openDoor\USER\ESP8266.h \
+ F:\Electricity\Stm32\openDoor\SYSTEM/lcd.h \
+ d:\progra~1\mingw\gcc-ar~1\arm-none-eabi\include\stdlib.h \
+ d:\progra~1\mingw\gcc-ar~1\arm-none-eabi\include\machine\stdlib.h \
+ d:\progra~1\mingw\gcc-ar~1\arm-none-eabi\include\alloca.h

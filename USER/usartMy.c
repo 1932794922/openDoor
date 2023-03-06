@@ -29,17 +29,28 @@ uint8_t huart3_buf;	    //串口3接收中断缓冲
 //功能：串口1发送
 //返回值：无
 /*********************************************************************************/
-void usart_printf(UART_HandleTypeDef *huart, const char *format, ...)
+void usart_printf(UART_HandleTypeDef *handleTypeDef, const char *format, ...)
 {
     va_list arg;
-    static char SendBuffer[200] = {0};
+    static char SendBuffer[255] = {0};
 
-    while (__HAL_UART_GET_FLAG(huart, UART_FLAG_TC) == RESET);
+    while (__HAL_UART_GET_FLAG(handleTypeDef, UART_FLAG_TC) == RESET);
 
     va_start(arg, format);
     vsprintf(SendBuffer, format, arg);
     va_end(arg);
-    HAL_UART_Transmit(huart, (uint8_t *)SendBuffer, strlen(SendBuffer), 0xFFFF);
+    HAL_UART_Transmit(handleTypeDef, (uint8_t *)SendBuffer, strlen(SendBuffer), 0xFFFF);
+}
+
+void usart_printf_dma(UART_HandleTypeDef *handleTypeDef, const char *format, ...)
+{
+    va_list arg;
+    static char SendBuffer[255] = {0};
+    while (__HAL_UART_GET_FLAG(handleTypeDef, UART_FLAG_TC) == RESET);
+    va_start(arg, format);
+    vsprintf(SendBuffer, format, arg);
+    va_end(arg);
+    HAL_UART_Transmit_DMA(handleTypeDef, (uint8_t *)SendBuffer, strlen(SendBuffer));
 }
 
 
@@ -85,7 +96,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 
     if (huart->Instance == USART1)
     {
-        dateRX(huart1_buf);
+        //dateRX(huart1_buf);
         //usart_printf(&huart1, "%c\r\n", huart1_buf);
     }
 
@@ -94,7 +105,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
     if (huart->Instance == USART2)
     {
 
-        //usart_printf(&huart1, "%s\r\n", USART2->DR);
+        dateRX(huart2_buf);
 
     }
 
@@ -109,7 +120,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 
 
     HAL_UART_Receive_IT(&huart1, (uint8_t *)&huart1_buf, 1);
-    HAL_UART_Receive_IT(&huart2, (uint8_t *)&huart2_buf, 1);
+    HAL_UART_Receive_DMA(&huart2, (uint8_t *)&huart2_buf, 1);
     HAL_UART_Receive_IT(&huart3, (uint8_t *)&huart3_buf, 1);
 }
 

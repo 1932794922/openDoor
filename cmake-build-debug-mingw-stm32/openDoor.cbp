@@ -102,6 +102,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="F:/Electricity/Stm32/openDoor/Core/Inc/dma.h">
+			<Option target="openDoor.elf"/>
+		</Unit>
 		<Unit filename="F:/Electricity/Stm32/openDoor/Core/Inc/fmc.h">
 			<Option target="openDoor.elf"/>
 		</Unit>
@@ -121,6 +124,9 @@
 			<Option target="openDoor.elf"/>
 		</Unit>
 		<Unit filename="F:/Electricity/Stm32/openDoor/Core/Inc/usart.h">
+			<Option target="openDoor.elf"/>
+		</Unit>
+		<Unit filename="F:/Electricity/Stm32/openDoor/Core/Src/dma.c">
 			<Option target="openDoor.elf"/>
 		</Unit>
 		<Unit filename="F:/Electricity/Stm32/openDoor/Core/Src/fmc.c">
@@ -429,6 +435,12 @@
 		<Unit filename="F:/Electricity/Stm32/openDoor/USER/AS608HARD.h">
 			<Option target="openDoor.elf"/>
 		</Unit>
+		<Unit filename="F:/Electricity/Stm32/openDoor/USER/ESP8266.c">
+			<Option target="openDoor.elf"/>
+		</Unit>
+		<Unit filename="F:/Electricity/Stm32/openDoor/USER/ESP8266.h">
+			<Option target="openDoor.elf"/>
+		</Unit>
 		<Unit filename="F:/Electricity/Stm32/openDoor/USER/R.c">
 			<Option target="openDoor.elf"/>
 		</Unit>
@@ -457,6 +469,12 @@
 			<Option target="openDoor.elf"/>
 		</Unit>
 		<Unit filename="F:/Electricity/Stm32/openDoor/USER/dataUtils.h">
+			<Option target="openDoor.elf"/>
+		</Unit>
+		<Unit filename="F:/Electricity/Stm32/openDoor/USER/funHandle.c">
+			<Option target="openDoor.elf"/>
+		</Unit>
+		<Unit filename="F:/Electricity/Stm32/openDoor/USER/funHandle.h">
 			<Option target="openDoor.elf"/>
 		</Unit>
 		<Unit filename="F:/Electricity/Stm32/openDoor/USER/ui.c">

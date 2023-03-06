@@ -128,6 +128,30 @@ openDoor.elf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\openDoor.elf.dir\build.make CMakeFiles/openDoor.elf.dir/build
 .PHONY : openDoor.elf/fast
 
+Core/Src/dma.obj: Core/Src/dma.c.obj
+.PHONY : Core/Src/dma.obj
+
+# target to build an object file
+Core/Src/dma.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\openDoor.elf.dir\build.make CMakeFiles/openDoor.elf.dir/Core/Src/dma.c.obj
+.PHONY : Core/Src/dma.c.obj
+
+Core/Src/dma.i: Core/Src/dma.c.i
+.PHONY : Core/Src/dma.i
+
+# target to preprocess a source file
+Core/Src/dma.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\openDoor.elf.dir\build.make CMakeFiles/openDoor.elf.dir/Core/Src/dma.c.i
+.PHONY : Core/Src/dma.c.i
+
+Core/Src/dma.s: Core/Src/dma.c.s
+.PHONY : Core/Src/dma.s
+
+# target to generate assembly for a file
+Core/Src/dma.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\openDoor.elf.dir\build.make CMakeFiles/openDoor.elf.dir/Core/Src/dma.c.s
+.PHONY : Core/Src/dma.c.s
+
 Core/Src/fmc.obj: Core/Src/fmc.c.obj
 .PHONY : Core/Src/fmc.obj
 
@@ -952,6 +976,30 @@ USER/AS608HARD.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\openDoor.elf.dir\build.make CMakeFiles/openDoor.elf.dir/USER/AS608HARD.c.s
 .PHONY : USER/AS608HARD.c.s
 
+USER/ESP8266.obj: USER/ESP8266.c.obj
+.PHONY : USER/ESP8266.obj
+
+# target to build an object file
+USER/ESP8266.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\openDoor.elf.dir\build.make CMakeFiles/openDoor.elf.dir/USER/ESP8266.c.obj
+.PHONY : USER/ESP8266.c.obj
+
+USER/ESP8266.i: USER/ESP8266.c.i
+.PHONY : USER/ESP8266.i
+
+# target to preprocess a source file
+USER/ESP8266.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\openDoor.elf.dir\build.make CMakeFiles/openDoor.elf.dir/USER/ESP8266.c.i
+.PHONY : USER/ESP8266.c.i
+
+USER/ESP8266.s: USER/ESP8266.c.s
+.PHONY : USER/ESP8266.s
+
+# target to generate assembly for a file
+USER/ESP8266.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\openDoor.elf.dir\build.make CMakeFiles/openDoor.elf.dir/USER/ESP8266.c.s
+.PHONY : USER/ESP8266.c.s
+
 USER/R.obj: USER/R.c.obj
 .PHONY : USER/R.obj
 
@@ -1072,6 +1120,30 @@ USER/dataUtils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\openDoor.elf.dir\build.make CMakeFiles/openDoor.elf.dir/USER/dataUtils.c.s
 .PHONY : USER/dataUtils.c.s
 
+USER/funHandle.obj: USER/funHandle.c.obj
+.PHONY : USER/funHandle.obj
+
+# target to build an object file
+USER/funHandle.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\openDoor.elf.dir\build.make CMakeFiles/openDoor.elf.dir/USER/funHandle.c.obj
+.PHONY : USER/funHandle.c.obj
+
+USER/funHandle.i: USER/funHandle.c.i
+.PHONY : USER/funHandle.i
+
+# target to preprocess a source file
+USER/funHandle.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\openDoor.elf.dir\build.make CMakeFiles/openDoor.elf.dir/USER/funHandle.c.i
+.PHONY : USER/funHandle.c.i
+
+USER/funHandle.s: USER/funHandle.c.s
+.PHONY : USER/funHandle.s
+
+# target to generate assembly for a file
+USER/funHandle.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\openDoor.elf.dir\build.make CMakeFiles/openDoor.elf.dir/USER/funHandle.c.s
+.PHONY : USER/funHandle.c.s
+
 USER/ui.obj: USER/ui.c.obj
 .PHONY : USER/ui.obj
 
@@ -1153,6 +1225,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... openDoor.elf
+	@echo ... Core/Src/dma.obj
+	@echo ... Core/Src/dma.i
+	@echo ... Core/Src/dma.s
 	@echo ... Core/Src/fmc.obj
 	@echo ... Core/Src/fmc.i
 	@echo ... Core/Src/fmc.s
@@ -1256,6 +1331,9 @@ help:
 	@echo ... USER/AS608HARD.obj
 	@echo ... USER/AS608HARD.i
 	@echo ... USER/AS608HARD.s
+	@echo ... USER/ESP8266.obj
+	@echo ... USER/ESP8266.i
+	@echo ... USER/ESP8266.s
 	@echo ... USER/R.obj
 	@echo ... USER/R.i
 	@echo ... USER/R.s
@@ -1271,6 +1349,9 @@ help:
 	@echo ... USER/dataUtils.obj
 	@echo ... USER/dataUtils.i
 	@echo ... USER/dataUtils.s
+	@echo ... USER/funHandle.obj
+	@echo ... USER/funHandle.i
+	@echo ... USER/funHandle.s
 	@echo ... USER/ui.obj
 	@echo ... USER/ui.i
 	@echo ... USER/ui.s

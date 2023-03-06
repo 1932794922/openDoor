@@ -68,10 +68,24 @@ include CMakeFiles/openDoor.elf.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/openDoor.elf.dir/flags.make
 
+CMakeFiles/openDoor.elf.dir/Core/Src/dma.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
+CMakeFiles/openDoor.elf.dir/Core/Src/dma.c.obj: ../Core/Src/dma.c
+CMakeFiles/openDoor.elf.dir/Core/Src/dma.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/dma.c.obj"
+	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Core/Src/dma.c.obj -MF CMakeFiles\openDoor.elf.dir\Core\Src\dma.c.obj.d -o CMakeFiles\openDoor.elf.dir\Core\Src\dma.c.obj -c F:\Electricity\Stm32\openDoor\Core\Src\dma.c
+
+CMakeFiles/openDoor.elf.dir/Core/Src/dma.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/openDoor.elf.dir/Core/Src/dma.c.i"
+	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\Electricity\Stm32\openDoor\Core\Src\dma.c > CMakeFiles\openDoor.elf.dir\Core\Src\dma.c.i
+
+CMakeFiles/openDoor.elf.dir/Core/Src/dma.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/openDoor.elf.dir/Core/Src/dma.c.s"
+	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\Electricity\Stm32\openDoor\Core\Src\dma.c -o CMakeFiles\openDoor.elf.dir\Core\Src\dma.c.s
+
 CMakeFiles/openDoor.elf.dir/Core/Src/fmc.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Core/Src/fmc.c.obj: ../Core/Src/fmc.c
 CMakeFiles/openDoor.elf.dir/Core/Src/fmc.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/fmc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/fmc.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Core/Src/fmc.c.obj -MF CMakeFiles\openDoor.elf.dir\Core\Src\fmc.c.obj.d -o CMakeFiles\openDoor.elf.dir\Core\Src\fmc.c.obj -c F:\Electricity\Stm32\openDoor\Core\Src\fmc.c
 
 CMakeFiles/openDoor.elf.dir/Core/Src/fmc.c.i: cmake_force
@@ -85,7 +99,7 @@ CMakeFiles/openDoor.elf.dir/Core/Src/fmc.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/Core/Src/gpio.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Core/Src/gpio.c.obj: ../Core/Src/gpio.c
 CMakeFiles/openDoor.elf.dir/Core/Src/gpio.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/gpio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/gpio.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Core/Src/gpio.c.obj -MF CMakeFiles\openDoor.elf.dir\Core\Src\gpio.c.obj.d -o CMakeFiles\openDoor.elf.dir\Core\Src\gpio.c.obj -c F:\Electricity\Stm32\openDoor\Core\Src\gpio.c
 
 CMakeFiles/openDoor.elf.dir/Core/Src/gpio.c.i: cmake_force
@@ -99,7 +113,7 @@ CMakeFiles/openDoor.elf.dir/Core/Src/gpio.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/Core/Src/main.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Core/Src/main.c.obj: ../Core/Src/main.c
 CMakeFiles/openDoor.elf.dir/Core/Src/main.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/main.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/main.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Core/Src/main.c.obj -MF CMakeFiles\openDoor.elf.dir\Core\Src\main.c.obj.d -o CMakeFiles\openDoor.elf.dir\Core\Src\main.c.obj -c F:\Electricity\Stm32\openDoor\Core\Src\main.c
 
 CMakeFiles/openDoor.elf.dir/Core/Src/main.c.i: cmake_force
@@ -113,7 +127,7 @@ CMakeFiles/openDoor.elf.dir/Core/Src/main.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj: ../Core/Src/stm32f4xx_hal_msp.c
 CMakeFiles/openDoor.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj -MF CMakeFiles\openDoor.elf.dir\Core\Src\stm32f4xx_hal_msp.c.obj.d -o CMakeFiles\openDoor.elf.dir\Core\Src\stm32f4xx_hal_msp.c.obj -c F:\Electricity\Stm32\openDoor\Core\Src\stm32f4xx_hal_msp.c
 
 CMakeFiles/openDoor.elf.dir/Core/Src/stm32f4xx_hal_msp.c.i: cmake_force
@@ -127,7 +141,7 @@ CMakeFiles/openDoor.elf.dir/Core/Src/stm32f4xx_hal_msp.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/Core/Src/stm32f4xx_it.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Src/stm32f4xx_it.c
 CMakeFiles/openDoor.elf.dir/Core/Src/stm32f4xx_it.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/stm32f4xx_it.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/stm32f4xx_it.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Core/Src/stm32f4xx_it.c.obj -MF CMakeFiles\openDoor.elf.dir\Core\Src\stm32f4xx_it.c.obj.d -o CMakeFiles\openDoor.elf.dir\Core\Src\stm32f4xx_it.c.obj -c F:\Electricity\Stm32\openDoor\Core\Src\stm32f4xx_it.c
 
 CMakeFiles/openDoor.elf.dir/Core/Src/stm32f4xx_it.c.i: cmake_force
@@ -141,7 +155,7 @@ CMakeFiles/openDoor.elf.dir/Core/Src/stm32f4xx_it.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/Core/Src/syscalls.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Core/Src/syscalls.c.obj: ../Core/Src/syscalls.c
 CMakeFiles/openDoor.elf.dir/Core/Src/syscalls.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/syscalls.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/syscalls.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Core/Src/syscalls.c.obj -MF CMakeFiles\openDoor.elf.dir\Core\Src\syscalls.c.obj.d -o CMakeFiles\openDoor.elf.dir\Core\Src\syscalls.c.obj -c F:\Electricity\Stm32\openDoor\Core\Src\syscalls.c
 
 CMakeFiles/openDoor.elf.dir/Core/Src/syscalls.c.i: cmake_force
@@ -155,7 +169,7 @@ CMakeFiles/openDoor.elf.dir/Core/Src/syscalls.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/Core/Src/sysmem.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Core/Src/sysmem.c.obj: ../Core/Src/sysmem.c
 CMakeFiles/openDoor.elf.dir/Core/Src/sysmem.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/sysmem.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/sysmem.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Core/Src/sysmem.c.obj -MF CMakeFiles\openDoor.elf.dir\Core\Src\sysmem.c.obj.d -o CMakeFiles\openDoor.elf.dir\Core\Src\sysmem.c.obj -c F:\Electricity\Stm32\openDoor\Core\Src\sysmem.c
 
 CMakeFiles/openDoor.elf.dir/Core/Src/sysmem.c.i: cmake_force
@@ -169,7 +183,7 @@ CMakeFiles/openDoor.elf.dir/Core/Src/sysmem.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/Core/Src/system_stm32f4xx.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Core/Src/system_stm32f4xx.c.obj: ../Core/Src/system_stm32f4xx.c
 CMakeFiles/openDoor.elf.dir/Core/Src/system_stm32f4xx.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/system_stm32f4xx.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/system_stm32f4xx.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Core/Src/system_stm32f4xx.c.obj -MF CMakeFiles\openDoor.elf.dir\Core\Src\system_stm32f4xx.c.obj.d -o CMakeFiles\openDoor.elf.dir\Core\Src\system_stm32f4xx.c.obj -c F:\Electricity\Stm32\openDoor\Core\Src\system_stm32f4xx.c
 
 CMakeFiles/openDoor.elf.dir/Core/Src/system_stm32f4xx.c.i: cmake_force
@@ -183,7 +197,7 @@ CMakeFiles/openDoor.elf.dir/Core/Src/system_stm32f4xx.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/Core/Src/tim.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Core/Src/tim.c.obj: ../Core/Src/tim.c
 CMakeFiles/openDoor.elf.dir/Core/Src/tim.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/tim.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/tim.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Core/Src/tim.c.obj -MF CMakeFiles\openDoor.elf.dir\Core\Src\tim.c.obj.d -o CMakeFiles\openDoor.elf.dir\Core\Src\tim.c.obj -c F:\Electricity\Stm32\openDoor\Core\Src\tim.c
 
 CMakeFiles/openDoor.elf.dir/Core/Src/tim.c.i: cmake_force
@@ -197,7 +211,7 @@ CMakeFiles/openDoor.elf.dir/Core/Src/tim.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/Core/Src/usart.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Core/Src/usart.c.obj: ../Core/Src/usart.c
 CMakeFiles/openDoor.elf.dir/Core/Src/usart.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/usart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/openDoor.elf.dir/Core/Src/usart.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Core/Src/usart.c.obj -MF CMakeFiles\openDoor.elf.dir\Core\Src\usart.c.obj.d -o CMakeFiles\openDoor.elf.dir\Core\Src\usart.c.obj -c F:\Electricity\Stm32\openDoor\Core\Src\usart.c
 
 CMakeFiles/openDoor.elf.dir/Core/Src/usart.c.i: cmake_force
@@ -210,7 +224,7 @@ CMakeFiles/openDoor.elf.dir/Core/Src/usart.c.s: cmake_force
 
 CMakeFiles/openDoor.elf.dir/Core/Startup/startup_stm32f427vgtx.s.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Core/Startup/startup_stm32f427vgtx.s.obj: ../Core/Startup/startup_stm32f427vgtx.s
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building ASM object CMakeFiles/openDoor.elf.dir/Core/Startup/startup_stm32f427vgtx.s.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building ASM object CMakeFiles/openDoor.elf.dir/Core/Startup/startup_stm32f427vgtx.s.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\openDoor.elf.dir\Core\Startup\startup_stm32f427vgtx.s.obj -c F:\Electricity\Stm32\openDoor\Core\Startup\startup_stm32f427vgtx.s
 
 CMakeFiles/openDoor.elf.dir/Core/Startup/startup_stm32f427vgtx.s.i: cmake_force
@@ -224,7 +238,7 @@ CMakeFiles/openDoor.elf.dir/Core/Startup/startup_stm32f427vgtx.s.s: cmake_force
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj -MF CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c.obj.d -o CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c.obj -c F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c
 
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.i: cmake_force
@@ -238,7 +252,7 @@ CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.s: 
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj -MF CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c.obj.d -o CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c.obj -c F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c
 
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.i: cmake_force
@@ -252,7 +266,7 @@ CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_corte
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj -MF CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c.obj.d -o CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c.obj -c F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c
 
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.i: cmake_force
@@ -266,7 +280,7 @@ CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj -MF CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c.obj.d -o CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c.obj -c F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c
 
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.i: cmake_force
@@ -280,7 +294,7 @@ CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_e
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj -MF CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.c.obj.d -o CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.c.obj -c F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.c
 
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.i: cmake_force
@@ -294,7 +308,7 @@ CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj -MF CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c.obj.d -o CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c.obj -c F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c
 
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.i: cmake_force
@@ -308,7 +322,7 @@ CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj -MF CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c.obj.d -o CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c.obj -c F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c
 
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.i: cmake_force
@@ -322,7 +336,7 @@ CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj -MF CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c.obj.d -o CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c.obj -c F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c
 
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.i: cmake_force
@@ -336,7 +350,7 @@ CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj -MF CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c.obj.d -o CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c.obj -c F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c
 
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.i: cmake_force
@@ -350,7 +364,7 @@ CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj -MF CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c.obj.d -o CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c.obj -c F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c
 
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.i: cmake_force
@@ -364,7 +378,7 @@ CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj -MF CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c.obj.d -o CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c.obj -c F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c
 
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.i: cmake_force
@@ -378,7 +392,7 @@ CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_e
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj -MF CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c.obj.d -o CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c.obj -c F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c
 
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.i: cmake_force
@@ -392,7 +406,7 @@ CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj -MF CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c.obj.d -o CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c.obj -c F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c
 
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.i: cmake_force
@@ -406,7 +420,7 @@ CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_e
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c.obj -MF CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_sram.c.obj.d -o CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_sram.c.obj -c F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_sram.c
 
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c.i: cmake_force
@@ -420,7 +434,7 @@ CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj -MF CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c.obj.d -o CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c.obj -c F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c
 
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.i: cmake_force
@@ -434,7 +448,7 @@ CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj -MF CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c.obj.d -o CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c.obj -c F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c
 
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.i: cmake_force
@@ -448,7 +462,7 @@ CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_e
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj -MF CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c.obj.d -o CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c.obj -c F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c
 
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.i: cmake_force
@@ -462,7 +476,7 @@ CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c.obj -MF CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_fmc.c.obj.d -o CMakeFiles\openDoor.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_fmc.c.obj -c F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_fmc.c
 
 CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c.i: cmake_force
@@ -476,7 +490,7 @@ CMakeFiles/openDoor.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c.
 CMakeFiles/openDoor.elf.dir/SYSTEM/delay.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/SYSTEM/delay.c.obj: ../SYSTEM/delay.c
 CMakeFiles/openDoor.elf.dir/SYSTEM/delay.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/openDoor.elf.dir/SYSTEM/delay.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/openDoor.elf.dir/SYSTEM/delay.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/SYSTEM/delay.c.obj -MF CMakeFiles\openDoor.elf.dir\SYSTEM\delay.c.obj.d -o CMakeFiles\openDoor.elf.dir\SYSTEM\delay.c.obj -c F:\Electricity\Stm32\openDoor\SYSTEM\delay.c
 
 CMakeFiles/openDoor.elf.dir/SYSTEM/delay.c.i: cmake_force
@@ -490,7 +504,7 @@ CMakeFiles/openDoor.elf.dir/SYSTEM/delay.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/SYSTEM/lcd.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/SYSTEM/lcd.c.obj: ../SYSTEM/lcd.c
 CMakeFiles/openDoor.elf.dir/SYSTEM/lcd.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/openDoor.elf.dir/SYSTEM/lcd.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/openDoor.elf.dir/SYSTEM/lcd.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/SYSTEM/lcd.c.obj -MF CMakeFiles\openDoor.elf.dir\SYSTEM\lcd.c.obj.d -o CMakeFiles\openDoor.elf.dir\SYSTEM\lcd.c.obj -c F:\Electricity\Stm32\openDoor\SYSTEM\lcd.c
 
 CMakeFiles/openDoor.elf.dir/SYSTEM/lcd.c.i: cmake_force
@@ -504,7 +518,7 @@ CMakeFiles/openDoor.elf.dir/SYSTEM/lcd.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/SYSTEM/stmflash.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/SYSTEM/stmflash.c.obj: ../SYSTEM/stmflash.c
 CMakeFiles/openDoor.elf.dir/SYSTEM/stmflash.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/openDoor.elf.dir/SYSTEM/stmflash.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/openDoor.elf.dir/SYSTEM/stmflash.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/SYSTEM/stmflash.c.obj -MF CMakeFiles\openDoor.elf.dir\SYSTEM\stmflash.c.obj.d -o CMakeFiles\openDoor.elf.dir\SYSTEM\stmflash.c.obj -c F:\Electricity\Stm32\openDoor\SYSTEM\stmflash.c
 
 CMakeFiles/openDoor.elf.dir/SYSTEM/stmflash.c.i: cmake_force
@@ -518,7 +532,7 @@ CMakeFiles/openDoor.elf.dir/SYSTEM/stmflash.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/SYSTEM/sys.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/SYSTEM/sys.c.obj: ../SYSTEM/sys.c
 CMakeFiles/openDoor.elf.dir/SYSTEM/sys.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/openDoor.elf.dir/SYSTEM/sys.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/openDoor.elf.dir/SYSTEM/sys.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/SYSTEM/sys.c.obj -MF CMakeFiles\openDoor.elf.dir\SYSTEM\sys.c.obj.d -o CMakeFiles\openDoor.elf.dir\SYSTEM\sys.c.obj -c F:\Electricity\Stm32\openDoor\SYSTEM\sys.c
 
 CMakeFiles/openDoor.elf.dir/SYSTEM/sys.c.i: cmake_force
@@ -532,7 +546,7 @@ CMakeFiles/openDoor.elf.dir/SYSTEM/sys.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/SYSTEM/touch.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/SYSTEM/touch.c.obj: ../SYSTEM/touch.c
 CMakeFiles/openDoor.elf.dir/SYSTEM/touch.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/openDoor.elf.dir/SYSTEM/touch.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/openDoor.elf.dir/SYSTEM/touch.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/SYSTEM/touch.c.obj -MF CMakeFiles\openDoor.elf.dir\SYSTEM\touch.c.obj.d -o CMakeFiles\openDoor.elf.dir\SYSTEM\touch.c.obj -c F:\Electricity\Stm32\openDoor\SYSTEM\touch.c
 
 CMakeFiles/openDoor.elf.dir/SYSTEM/touch.c.i: cmake_force
@@ -546,7 +560,7 @@ CMakeFiles/openDoor.elf.dir/SYSTEM/touch.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/USER/AS608HARD.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/USER/AS608HARD.c.obj: ../USER/AS608HARD.c
 CMakeFiles/openDoor.elf.dir/USER/AS608HARD.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/openDoor.elf.dir/USER/AS608HARD.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/openDoor.elf.dir/USER/AS608HARD.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/USER/AS608HARD.c.obj -MF CMakeFiles\openDoor.elf.dir\USER\AS608HARD.c.obj.d -o CMakeFiles\openDoor.elf.dir\USER\AS608HARD.c.obj -c F:\Electricity\Stm32\openDoor\USER\AS608HARD.c
 
 CMakeFiles/openDoor.elf.dir/USER/AS608HARD.c.i: cmake_force
@@ -557,10 +571,24 @@ CMakeFiles/openDoor.elf.dir/USER/AS608HARD.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/openDoor.elf.dir/USER/AS608HARD.c.s"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\Electricity\Stm32\openDoor\USER\AS608HARD.c -o CMakeFiles\openDoor.elf.dir\USER\AS608HARD.c.s
 
+CMakeFiles/openDoor.elf.dir/USER/ESP8266.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
+CMakeFiles/openDoor.elf.dir/USER/ESP8266.c.obj: ../USER/ESP8266.c
+CMakeFiles/openDoor.elf.dir/USER/ESP8266.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/openDoor.elf.dir/USER/ESP8266.c.obj"
+	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/USER/ESP8266.c.obj -MF CMakeFiles\openDoor.elf.dir\USER\ESP8266.c.obj.d -o CMakeFiles\openDoor.elf.dir\USER\ESP8266.c.obj -c F:\Electricity\Stm32\openDoor\USER\ESP8266.c
+
+CMakeFiles/openDoor.elf.dir/USER/ESP8266.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/openDoor.elf.dir/USER/ESP8266.c.i"
+	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\Electricity\Stm32\openDoor\USER\ESP8266.c > CMakeFiles\openDoor.elf.dir\USER\ESP8266.c.i
+
+CMakeFiles/openDoor.elf.dir/USER/ESP8266.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/openDoor.elf.dir/USER/ESP8266.c.s"
+	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\Electricity\Stm32\openDoor\USER\ESP8266.c -o CMakeFiles\openDoor.elf.dir\USER\ESP8266.c.s
+
 CMakeFiles/openDoor.elf.dir/USER/R.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/USER/R.c.obj: ../USER/R.c
 CMakeFiles/openDoor.elf.dir/USER/R.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/openDoor.elf.dir/USER/R.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/openDoor.elf.dir/USER/R.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/USER/R.c.obj -MF CMakeFiles\openDoor.elf.dir\USER\R.c.obj.d -o CMakeFiles\openDoor.elf.dir\USER\R.c.obj -c F:\Electricity\Stm32\openDoor\USER\R.c
 
 CMakeFiles/openDoor.elf.dir/USER/R.c.i: cmake_force
@@ -574,7 +602,7 @@ CMakeFiles/openDoor.elf.dir/USER/R.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/USER/Scheduler.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/USER/Scheduler.c.obj: ../USER/Scheduler.c
 CMakeFiles/openDoor.elf.dir/USER/Scheduler.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/openDoor.elf.dir/USER/Scheduler.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/openDoor.elf.dir/USER/Scheduler.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/USER/Scheduler.c.obj -MF CMakeFiles\openDoor.elf.dir\USER\Scheduler.c.obj.d -o CMakeFiles\openDoor.elf.dir\USER\Scheduler.c.obj -c F:\Electricity\Stm32\openDoor\USER\Scheduler.c
 
 CMakeFiles/openDoor.elf.dir/USER/Scheduler.c.i: cmake_force
@@ -588,7 +616,7 @@ CMakeFiles/openDoor.elf.dir/USER/Scheduler.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/USER/Screen.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/USER/Screen.c.obj: ../USER/Screen.c
 CMakeFiles/openDoor.elf.dir/USER/Screen.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/openDoor.elf.dir/USER/Screen.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/openDoor.elf.dir/USER/Screen.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/USER/Screen.c.obj -MF CMakeFiles\openDoor.elf.dir\USER\Screen.c.obj.d -o CMakeFiles\openDoor.elf.dir\USER\Screen.c.obj -c F:\Electricity\Stm32\openDoor\USER\Screen.c
 
 CMakeFiles/openDoor.elf.dir/USER/Screen.c.i: cmake_force
@@ -602,7 +630,7 @@ CMakeFiles/openDoor.elf.dir/USER/Screen.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/USER/as608.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/USER/as608.c.obj: ../USER/as608.c
 CMakeFiles/openDoor.elf.dir/USER/as608.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/openDoor.elf.dir/USER/as608.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/openDoor.elf.dir/USER/as608.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/USER/as608.c.obj -MF CMakeFiles\openDoor.elf.dir\USER\as608.c.obj.d -o CMakeFiles\openDoor.elf.dir\USER\as608.c.obj -c F:\Electricity\Stm32\openDoor\USER\as608.c
 
 CMakeFiles/openDoor.elf.dir/USER/as608.c.i: cmake_force
@@ -616,7 +644,7 @@ CMakeFiles/openDoor.elf.dir/USER/as608.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/USER/dataUtils.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/USER/dataUtils.c.obj: ../USER/dataUtils.c
 CMakeFiles/openDoor.elf.dir/USER/dataUtils.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/openDoor.elf.dir/USER/dataUtils.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/openDoor.elf.dir/USER/dataUtils.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/USER/dataUtils.c.obj -MF CMakeFiles\openDoor.elf.dir\USER\dataUtils.c.obj.d -o CMakeFiles\openDoor.elf.dir\USER\dataUtils.c.obj -c F:\Electricity\Stm32\openDoor\USER\dataUtils.c
 
 CMakeFiles/openDoor.elf.dir/USER/dataUtils.c.i: cmake_force
@@ -627,10 +655,24 @@ CMakeFiles/openDoor.elf.dir/USER/dataUtils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/openDoor.elf.dir/USER/dataUtils.c.s"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\Electricity\Stm32\openDoor\USER\dataUtils.c -o CMakeFiles\openDoor.elf.dir\USER\dataUtils.c.s
 
+CMakeFiles/openDoor.elf.dir/USER/funHandle.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
+CMakeFiles/openDoor.elf.dir/USER/funHandle.c.obj: ../USER/funHandle.c
+CMakeFiles/openDoor.elf.dir/USER/funHandle.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/openDoor.elf.dir/USER/funHandle.c.obj"
+	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/USER/funHandle.c.obj -MF CMakeFiles\openDoor.elf.dir\USER\funHandle.c.obj.d -o CMakeFiles\openDoor.elf.dir\USER\funHandle.c.obj -c F:\Electricity\Stm32\openDoor\USER\funHandle.c
+
+CMakeFiles/openDoor.elf.dir/USER/funHandle.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/openDoor.elf.dir/USER/funHandle.c.i"
+	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\Electricity\Stm32\openDoor\USER\funHandle.c > CMakeFiles\openDoor.elf.dir\USER\funHandle.c.i
+
+CMakeFiles/openDoor.elf.dir/USER/funHandle.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/openDoor.elf.dir/USER/funHandle.c.s"
+	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\Electricity\Stm32\openDoor\USER\funHandle.c -o CMakeFiles\openDoor.elf.dir\USER\funHandle.c.s
+
 CMakeFiles/openDoor.elf.dir/USER/ui.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/USER/ui.c.obj: ../USER/ui.c
 CMakeFiles/openDoor.elf.dir/USER/ui.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/openDoor.elf.dir/USER/ui.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/openDoor.elf.dir/USER/ui.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/USER/ui.c.obj -MF CMakeFiles\openDoor.elf.dir\USER\ui.c.obj.d -o CMakeFiles\openDoor.elf.dir\USER\ui.c.obj -c F:\Electricity\Stm32\openDoor\USER\ui.c
 
 CMakeFiles/openDoor.elf.dir/USER/ui.c.i: cmake_force
@@ -644,7 +686,7 @@ CMakeFiles/openDoor.elf.dir/USER/ui.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/USER/usartMy.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/USER/usartMy.c.obj: ../USER/usartMy.c
 CMakeFiles/openDoor.elf.dir/USER/usartMy.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/openDoor.elf.dir/USER/usartMy.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/openDoor.elf.dir/USER/usartMy.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/USER/usartMy.c.obj -MF CMakeFiles\openDoor.elf.dir\USER\usartMy.c.obj.d -o CMakeFiles\openDoor.elf.dir\USER\usartMy.c.obj -c F:\Electricity\Stm32\openDoor\USER\usartMy.c
 
 CMakeFiles/openDoor.elf.dir/USER/usartMy.c.i: cmake_force
@@ -658,7 +700,7 @@ CMakeFiles/openDoor.elf.dir/USER/usartMy.c.s: cmake_force
 CMakeFiles/openDoor.elf.dir/UTILS/cJSON.c.obj: CMakeFiles/openDoor.elf.dir/flags.make
 CMakeFiles/openDoor.elf.dir/UTILS/cJSON.c.obj: ../UTILS/cJSON.c
 CMakeFiles/openDoor.elf.dir/UTILS/cJSON.c.obj: CMakeFiles/openDoor.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/openDoor.elf.dir/UTILS/cJSON.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/openDoor.elf.dir/UTILS/cJSON.c.obj"
 	D:\PROGRA~1\minGW\GCC-AR~1\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/openDoor.elf.dir/UTILS/cJSON.c.obj -MF CMakeFiles\openDoor.elf.dir\UTILS\cJSON.c.obj.d -o CMakeFiles\openDoor.elf.dir\UTILS\cJSON.c.obj -c F:\Electricity\Stm32\openDoor\UTILS\cJSON.c
 
 CMakeFiles/openDoor.elf.dir/UTILS/cJSON.c.i: cmake_force
@@ -671,6 +713,7 @@ CMakeFiles/openDoor.elf.dir/UTILS/cJSON.c.s: cmake_force
 
 # Object files for target openDoor.elf
 openDoor_elf_OBJECTS = \
+"CMakeFiles/openDoor.elf.dir/Core/Src/dma.c.obj" \
 "CMakeFiles/openDoor.elf.dir/Core/Src/fmc.c.obj" \
 "CMakeFiles/openDoor.elf.dir/Core/Src/gpio.c.obj" \
 "CMakeFiles/openDoor.elf.dir/Core/Src/main.c.obj" \
@@ -706,11 +749,13 @@ openDoor_elf_OBJECTS = \
 "CMakeFiles/openDoor.elf.dir/SYSTEM/sys.c.obj" \
 "CMakeFiles/openDoor.elf.dir/SYSTEM/touch.c.obj" \
 "CMakeFiles/openDoor.elf.dir/USER/AS608HARD.c.obj" \
+"CMakeFiles/openDoor.elf.dir/USER/ESP8266.c.obj" \
 "CMakeFiles/openDoor.elf.dir/USER/R.c.obj" \
 "CMakeFiles/openDoor.elf.dir/USER/Scheduler.c.obj" \
 "CMakeFiles/openDoor.elf.dir/USER/Screen.c.obj" \
 "CMakeFiles/openDoor.elf.dir/USER/as608.c.obj" \
 "CMakeFiles/openDoor.elf.dir/USER/dataUtils.c.obj" \
+"CMakeFiles/openDoor.elf.dir/USER/funHandle.c.obj" \
 "CMakeFiles/openDoor.elf.dir/USER/ui.c.obj" \
 "CMakeFiles/openDoor.elf.dir/USER/usartMy.c.obj" \
 "CMakeFiles/openDoor.elf.dir/UTILS/cJSON.c.obj"
@@ -718,6 +763,7 @@ openDoor_elf_OBJECTS = \
 # External object files for target openDoor.elf
 openDoor_elf_EXTERNAL_OBJECTS =
 
+openDoor.elf: CMakeFiles/openDoor.elf.dir/Core/Src/dma.c.obj
 openDoor.elf: CMakeFiles/openDoor.elf.dir/Core/Src/fmc.c.obj
 openDoor.elf: CMakeFiles/openDoor.elf.dir/Core/Src/gpio.c.obj
 openDoor.elf: CMakeFiles/openDoor.elf.dir/Core/Src/main.c.obj
@@ -753,17 +799,19 @@ openDoor.elf: CMakeFiles/openDoor.elf.dir/SYSTEM/stmflash.c.obj
 openDoor.elf: CMakeFiles/openDoor.elf.dir/SYSTEM/sys.c.obj
 openDoor.elf: CMakeFiles/openDoor.elf.dir/SYSTEM/touch.c.obj
 openDoor.elf: CMakeFiles/openDoor.elf.dir/USER/AS608HARD.c.obj
+openDoor.elf: CMakeFiles/openDoor.elf.dir/USER/ESP8266.c.obj
 openDoor.elf: CMakeFiles/openDoor.elf.dir/USER/R.c.obj
 openDoor.elf: CMakeFiles/openDoor.elf.dir/USER/Scheduler.c.obj
 openDoor.elf: CMakeFiles/openDoor.elf.dir/USER/Screen.c.obj
 openDoor.elf: CMakeFiles/openDoor.elf.dir/USER/as608.c.obj
 openDoor.elf: CMakeFiles/openDoor.elf.dir/USER/dataUtils.c.obj
+openDoor.elf: CMakeFiles/openDoor.elf.dir/USER/funHandle.c.obj
 openDoor.elf: CMakeFiles/openDoor.elf.dir/USER/ui.c.obj
 openDoor.elf: CMakeFiles/openDoor.elf.dir/USER/usartMy.c.obj
 openDoor.elf: CMakeFiles/openDoor.elf.dir/UTILS/cJSON.c.obj
 openDoor.elf: CMakeFiles/openDoor.elf.dir/build.make
 openDoor.elf: CMakeFiles/openDoor.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Linking C executable openDoor.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Linking C executable openDoor.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\openDoor.elf.dir\link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building F:/Electricity/Stm32/openDoor/cmake-build-debug-mingw-stm32/openDoor.hex"
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building F:/Electricity/Stm32/openDoor/cmake-build-debug-mingw-stm32/openDoor.bin"

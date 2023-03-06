@@ -39,8 +39,9 @@ CMakeFiles/openDoor.elf.dir/Core/Src/main.c.obj: \
  F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Inc/stm32f4xx_hal_tim.h \
  F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Inc/stm32f4xx_hal_tim_ex.h \
  F:\Electricity\Stm32\openDoor\Drivers\STM32F4xx_HAL_Driver\Inc/stm32f4xx_hal_uart.h \
- F:\Electricity\Stm32\openDoor\Core\Inc/tim.h \
+ F:\Electricity\Stm32\openDoor\Core\Inc/dma.h \
  F:\Electricity\Stm32\openDoor\Core\Inc/main.h \
+ F:\Electricity\Stm32\openDoor\Core\Inc/tim.h \
  F:\Electricity\Stm32\openDoor\Core\Inc/usart.h \
  F:\Electricity\Stm32\openDoor\Core\Inc/gpio.h \
  F:\Electricity\Stm32\openDoor\Core\Inc/fmc.h \

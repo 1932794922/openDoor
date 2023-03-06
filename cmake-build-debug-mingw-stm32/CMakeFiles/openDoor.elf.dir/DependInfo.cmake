@@ -33,6 +33,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "F:/Electricity/Stm32/openDoor/Core/Src/dma.c" "CMakeFiles/openDoor.elf.dir/Core/Src/dma.c.obj" "gcc" "CMakeFiles/openDoor.elf.dir/Core/Src/dma.c.obj.d"
   "F:/Electricity/Stm32/openDoor/Core/Src/fmc.c" "CMakeFiles/openDoor.elf.dir/Core/Src/fmc.c.obj" "gcc" "CMakeFiles/openDoor.elf.dir/Core/Src/fmc.c.obj.d"
   "F:/Electricity/Stm32/openDoor/Core/Src/gpio.c" "CMakeFiles/openDoor.elf.dir/Core/Src/gpio.c.obj" "gcc" "CMakeFiles/openDoor.elf.dir/Core/Src/gpio.c.obj.d"
   "F:/Electricity/Stm32/openDoor/Core/Src/main.c" "CMakeFiles/openDoor.elf.dir/Core/Src/main.c.obj" "gcc" "CMakeFiles/openDoor.elf.dir/Core/Src/main.c.obj.d"
@@ -67,11 +68,13 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "F:/Electricity/Stm32/openDoor/SYSTEM/sys.c" "CMakeFiles/openDoor.elf.dir/SYSTEM/sys.c.obj" "gcc" "CMakeFiles/openDoor.elf.dir/SYSTEM/sys.c.obj.d"
   "F:/Electricity/Stm32/openDoor/SYSTEM/touch.c" "CMakeFiles/openDoor.elf.dir/SYSTEM/touch.c.obj" "gcc" "CMakeFiles/openDoor.elf.dir/SYSTEM/touch.c.obj.d"
   "F:/Electricity/Stm32/openDoor/USER/AS608HARD.c" "CMakeFiles/openDoor.elf.dir/USER/AS608HARD.c.obj" "gcc" "CMakeFiles/openDoor.elf.dir/USER/AS608HARD.c.obj.d"
+  "F:/Electricity/Stm32/openDoor/USER/ESP8266.c" "CMakeFiles/openDoor.elf.dir/USER/ESP8266.c.obj" "gcc" "CMakeFiles/openDoor.elf.dir/USER/ESP8266.c.obj.d"
   "F:/Electricity/Stm32/openDoor/USER/R.c" "CMakeFiles/openDoor.elf.dir/USER/R.c.obj" "gcc" "CMakeFiles/openDoor.elf.dir/USER/R.c.obj.d"
   "F:/Electricity/Stm32/openDoor/USER/Scheduler.c" "CMakeFiles/openDoor.elf.dir/USER/Scheduler.c.obj" "gcc" "CMakeFiles/openDoor.elf.dir/USER/Scheduler.c.obj.d"
   "F:/Electricity/Stm32/openDoor/USER/Screen.c" "CMakeFiles/openDoor.elf.dir/USER/Screen.c.obj" "gcc" "CMakeFiles/openDoor.elf.dir/USER/Screen.c.obj.d"
   "F:/Electricity/Stm32/openDoor/USER/as608.c" "CMakeFiles/openDoor.elf.dir/USER/as608.c.obj" "gcc" "CMakeFiles/openDoor.elf.dir/USER/as608.c.obj.d"
   "F:/Electricity/Stm32/openDoor/USER/dataUtils.c" "CMakeFiles/openDoor.elf.dir/USER/dataUtils.c.obj" "gcc" "CMakeFiles/openDoor.elf.dir/USER/dataUtils.c.obj.d"
+  "F:/Electricity/Stm32/openDoor/USER/funHandle.c" "CMakeFiles/openDoor.elf.dir/USER/funHandle.c.obj" "gcc" "CMakeFiles/openDoor.elf.dir/USER/funHandle.c.obj.d"
   "F:/Electricity/Stm32/openDoor/USER/ui.c" "CMakeFiles/openDoor.elf.dir/USER/ui.c.obj" "gcc" "CMakeFiles/openDoor.elf.dir/USER/ui.c.obj.d"
   "F:/Electricity/Stm32/openDoor/USER/usartMy.c" "CMakeFiles/openDoor.elf.dir/USER/usartMy.c.obj" "gcc" "CMakeFiles/openDoor.elf.dir/USER/usartMy.c.obj.d"
   "F:/Electricity/Stm32/openDoor/UTILS/cJSON.c" "CMakeFiles/openDoor.elf.dir/UTILS/cJSON.c.obj" "gcc" "CMakeFiles/openDoor.elf.dir/UTILS/cJSON.c.obj.d"

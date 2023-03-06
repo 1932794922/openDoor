@@ -81,4 +81,6 @@ CMakeFiles/openDoor.elf.dir/USER/as608.c.obj: \
  F:\Electricity\Stm32\openDoor\SYSTEM/touch.h \
  F:\Electricity\Stm32\openDoor\SYSTEM/stmflash.h \
  F:\Electricity\Stm32\openDoor\Core\Inc/tim.h \
- F:\Electricity\Stm32\openDoor\USER\AS608HARD.h
+ F:\Electricity\Stm32\openDoor\USER\AS608HARD.h \
+ F:\Electricity\Stm32\openDoor\USER\ESP8266.h \
+ F:\Electricity\Stm32\openDoor\UTILS/cJSON.h

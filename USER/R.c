@@ -1,35 +1,12 @@
 #include "R.h"
 #include <stdio.h>
 #include <string.h>
+#include <malloc.h>
 #include "cJSON.h"
-#include "R.h"
 #include "usartMy.h"
-#include "delay.h"
-
-
-R RData(char *json_string)
-{
-    R r;
-    cJSON *json = cJSON_Parse(json_string);
-
-    if (json == NULL)
-    {
-        usart_printf(&huart1, "Failed to parse JSON: %s\r\n", cJSON_GetErrorPtr());
-        return r;
-    }
-
-    r.code = cJSON_GetObjectItem(json, "code")->valueint;
-    r.message = cJSON_GetObjectItem(json, "message")->valuestring;
-    r.dataStr = cJSON_GetObjectItem(json, "data")->valuestring;
-    usart_printf(&huart1, "code: %d\r\n", r.code);
-    usart_printf(&huart1, "message: %s\r\n", r.message);
-    usart_printf(&huart1, "data: %s\r\n",  r.dataStr);
-    cJSON_Delete(json);
-    return r;
-}
-
-
-
+#include "funHandle.h"
+#include "ESP8266.h"
+#include "lcd.h"
 /*
     date --> 数据接收源
     hand --> 帧头
@@ -44,22 +21,18 @@ R RData(char *json_string)
     M{"code": 200,"message":"ok","data":"open"}Q
     rBuffer = parseRX(data, '{', '}', rBuffer);
 */
-void parseRX(uint8_t date, uint8_t hand, uint8_t end, RXBuffer *rBuffer)
-{
+void parseRX(uint8_t date, uint8_t hand, uint8_t end, RXBuffer *rBuffer) {
     // 数据1
-    if(date == hand)   //帧头
+    if (date == hand)   //帧头
     {
         rBuffer->flagReceiveStart = 1;
         rBuffer->flagReceiveFinish = 0;
-    }
-    else if((rBuffer->flagReceiveStart == 1) && (rBuffer->flagReceiveFinish == 0))  //开始接收
+    } else if ((rBuffer->flagReceiveStart == 1) && (rBuffer->flagReceiveFinish == 0))  //开始接收
     {
-        if(date != end)   //帧尾
+        if (date != end)   //帧尾
         {
             rBuffer->buffer[rBuffer->buffer_length++] = date;
-        }
-        else
-        {
+        } else {
             rBuffer->flagReceiveFinish = 1;   //接收完成ok
             rBuffer->buffer_length = 0;    //重置长度
             rBuffer->flagReceiveStart = 0; //消除等待下一帧数据
@@ -77,16 +50,24 @@ void parseRX(uint8_t date, uint8_t hand, uint8_t end, RXBuffer *rBuffer)
 
 // 接收mqtt数据
 RXBuffer rBuffer;
-void dateRX(uint8_t data)
-{
-    parseRX(data, 'M', 'Q', &rBuffer);
-
-    if(rBuffer.flagReceiveFinish)
-    {
-        usart_printf(&huart1, "%s\r\n", rBuffer.buffer);
-        //清空数组
+/**
+ * 串口接收数据
+ * @param data 串口数据帧数据
+ */
+void dateRX(uint8_t data) {
+    parseRX(data, FRAME_HEAD, FRAME_TAIL, &rBuffer);
+    // 数据接收完成
+    if (rBuffer.flagReceiveFinish) {
+        //usart_printf(&huart1, "%s\r\n", rBuffer.buffer);
         rBuffer.flagReceiveFinish = 0;
-        RData((char *)rBuffer.buffer);
+        cJSON *json = cJSON_Parse((char *) rBuffer.buffer);
+        char *dataString = cJSON_GetObjectItem(json, "data")->valuestring;
+        if (dataString != NULL) {
+            openDoorForMQTT(dataString);
+        }
+
+        cJSON_Delete(json);
+        //清空数组
         memset(rBuffer.buffer, 0, sizeof(rBuffer.buffer));
 
     }

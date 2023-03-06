@@ -12,7 +12,8 @@
 
 #define AS608_UART	huart3 //AS608模块所使用的串口
 
-#define DEBUG_UART	huart1 //串口
+#define DEBUG_UART	huart1 //串口1
+
 
 
 
