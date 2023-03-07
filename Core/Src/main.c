@@ -20,6 +20,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "dma.h"
+#include "spi.h"
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
@@ -36,6 +37,7 @@
 #include "as608.h"
 #include "string.h"
 #include "stdio.h"
+#include "RC522.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -76,7 +78,8 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+    uint8_t readUid[5];
+    uint8_t UID[5] = {0xFB, 0x29, 0x0B, 0x0A};//自己的卡号，可以通过串口打印通过下面读取到的打印到上位机，再把那个读取的卡号填入数组
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -85,7 +88,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-    delay_init(180);									//systick初始化
+    delay_init(180);                                    //systick初始化
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -103,50 +106,50 @@ int main(void)
   MX_USART3_UART_Init();
   MX_USART2_UART_Init();
   MX_FMC_Init();
+  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
 
     /* USER CODE BEGIN 2 */
 
     //usart_printf(&huart1, "AS608指纹模块测试开始\r\n");
     HAL_TIM_Base_Start_IT(&htim2); //1ms
-    HAL_UART_Receive_IT(&huart1, (uint8_t *)&huart1_buf, 1);
-    HAL_UART_Receive_DMA(&huart2, (uint8_t *)&huart2_buf, 1);
-    HAL_UART_Receive_IT(&huart3, (uint8_t *)&huart3_buf, 1);
+    HAL_UART_Receive_IT(&huart1, (uint8_t *) &huart1_buf, 1);
+    HAL_UART_Receive_DMA(&huart2, (uint8_t *) &huart2_buf, 1);
+    HAL_UART_Receive_IT(&huart3, (uint8_t *) &huart3_buf, 1);
     LCD_Init();      //LCD初始化
     LCD_Clear(BLACK);//清屏 LIGHTGREEN
-    tp_dev.init();	 //触摸屏初始化
+    tp_dev.init();     //触摸屏初始化
     Scheduler_Setup();      //调度器初始化
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET);
 
-    if(!as608_init())
-    {
-       // usart_printf(&huart1, "AS608指纹模块初始化成功\r\n");
-        LCD_ShowString(50, 20, (uint8_t *)"指纹模块初始化成功", RED, BLACK); //显示清屏区域
-    }
-    else
-    {
+    if (!as608_init()) {
+        // usart_printf(&huart1, "AS608指纹模块初始化成功\r\n");
+        LCD_ShowString(50, 20, (uint8_t *) "指纹模块初始化成功", RED, BLACK); //显示清屏区域
+    } else {
         LCD_Fill(0, 20, 240, 40, BLACK);
         //usart_printf(&huart1, "AS608指纹模块初始化失败\r\n");
-        LCD_ShowString(50, 20, (uint8_t *)"指纹模块初始化失败", RED, BLACK); //显示清屏区域
+        LCD_ShowString(50, 20, (uint8_t *) "指纹模块初始化失败", RED, BLACK); //显示清屏区域
     }
     delay_ms(1000);
+    RC522_Init();  //初始化RC522
+
+    usart_printf(&DEBUG_UART, "RC522初始化完成\r\n");
+
     LCD_Clear(BLACK);//清屏 LIGHTGREEN
-    LCD_ShowString(54, 0, (uint8_t *)"----门禁系统----", RED, BLACK);
+    LCD_ShowString(54, 0, (uint8_t *) "----门禁系统----", RED, BLACK);
     LCD_AS608_UI();
-    AS608_load_keyboard(0, 170, (uint8_t **)kbd_menu); //加载虚拟键盘
+    AS608_load_keyboard(0, 170, (uint8_t **) kbd_menu); //加载虚拟键盘
     //LCD_show();
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-    while (1)
-    {
+    while (1) {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-       Scheduler_Run();
-      
+        Scheduler_Run();
+
 
     }
 
@@ -219,8 +222,7 @@ void Error_Handler(void)
     /* User can add his own implementation to report the HAL error return state */
     __disable_irq();
 
-    while (1)
-    {
+    while (1) {
     }
 
   /* USER CODE END Error_Handler_Debug */

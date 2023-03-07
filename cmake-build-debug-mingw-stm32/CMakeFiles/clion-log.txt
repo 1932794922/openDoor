@@ -1,5 +1,0 @@
-"D:\Program Files (x86)\CLion 2022.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=D:/Program Files (x86)/minGW/bin/mingw32-make.exe" "-DCMAKE_C_COMPILER=D:/Program Files (x86)/minGW/gcc-arm-none-eabi/bin/arm-none-eabi-gcc.exe" "-DCMAKE_CXX_COMPILER=D:/Program Files (x86)/minGW/gcc-arm-none-eabi/bin/arm-none-eabi-g++.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S F:\Electricity\Stm32\openDoor -B F:\Electricity\Stm32\openDoor\cmake-build-debug-mingw-stm32
--- Minimal optimization, debug info included
--- Configuring done
--- Generating done
--- Build files have been written to: F:/Electricity/Stm32/openDoor/cmake-build-debug-mingw-stm32

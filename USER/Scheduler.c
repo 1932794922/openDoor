@@ -4,6 +4,7 @@
 #include "ui.h"
 #include "usartMy.h"
 #include "as608.h"
+#include "funHandle.h"
 
 #include "AS608HARD.h"
 
@@ -31,7 +32,6 @@ static void Loop_100Hz(void) //10ms执行一次
 static void Loop_50Hz(void) //20ms执行一次
 {
 
-
 }
 
 static void Loop_20Hz(void) //50ms执行一次
@@ -53,6 +53,7 @@ static void Loop_5Hz(void) //200ms执行一次
 
 static void Loop_1Hz(void) //1000ms执行一次
 {
+    Read_IDcard();
 
   //  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_6);
 

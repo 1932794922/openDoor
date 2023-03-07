@@ -9,8 +9,32 @@ RC522:
     PA5 ----> SCL
     PA6 ----> MISO
     PA7 ---->MOSI
+    PC0 ---->RST
+    PC1 ---->SDA
+    IRQ ---->悬空
+
 
 ESP8266:
     串口2
     PA2 ----> TX
     PA3 ----> RX
+
+
+门口:
+ PA1 ----> 门口
+
+
+
+
+include_directories(Core/Inc Drivers/STM32F4xx_HAL_Driver/Inc Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
+Drivers/CMSIS/Device/ST/STM32F4xx/Include Drivers/CMSIS/Include
+SYSTEM/
+USER/
+UTILS/
+)
+
+add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F427xx)
+
+file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*"
+"SYSTEM/*.*" "USER/*.*" "UTILS/*.*"
+)
