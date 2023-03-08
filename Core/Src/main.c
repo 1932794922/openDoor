@@ -131,12 +131,10 @@ int main(void)
     }
     delay_ms(1000);
     RC522_Init();  //初始化RC522
-
     usart_printf(&DEBUG_UART, "RC522初始化完成\r\n");
-
     LCD_Clear(BLACK);//清屏 LIGHTGREEN
-    LCD_ShowString(54, 0, (uint8_t *) "----门禁系统----", RED, BLACK);
     LCD_AS608_UI();
+    LCD_RC522_UI();
     AS608_load_keyboard(0, 170, (uint8_t **) kbd_menu); //加载虚拟键盘
     //LCD_show();
 

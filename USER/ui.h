@@ -10,10 +10,13 @@
 
 extern const char *kbd_menu[];
 extern const char *kbd_delFR[];
+extern uint8_t rC522Flag;
+
 
 void LCD_show(void);
-void LCD_Touch_Scan(void);
 void LCD_AS608_UI(void);
 void AS608_load_keyboard(uint16_t x, uint16_t y, uint8_t **kbtbl);
+void LCD_RC522_UI(void);
+void LCD_RC522_Scan(void);
 #endif
 
