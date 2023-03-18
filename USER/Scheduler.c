@@ -4,6 +4,7 @@
 #include "funHandle.h"
 
 #include "AS608HARD.h"
+#include "delay.h"
 
 uint8_t key_num;
 
@@ -46,6 +47,7 @@ static void Loop_10Hz(void) //100ms执行一次
 
 static void Loop_5Hz(void) //200ms执行一次
 {
+
 }
 
 static void Loop_1Hz(void) //1000ms执行一次

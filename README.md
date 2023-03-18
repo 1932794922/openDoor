@@ -23,7 +23,15 @@ ESP8266:
 门口:
  PA1 ----> 门口
 
+LCD触摸屏:
+    PB0
+    PB1
+    PB2
+    PB12
+    PB13
 
+舵机:
+    PD12    ----> 舵机
 
 
 include_directories(Core/Inc Drivers/STM32F4xx_HAL_Driver/Inc Drivers/STM32F4xx_HAL_Driver/Inc/Legacy

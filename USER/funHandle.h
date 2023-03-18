@@ -15,5 +15,9 @@ void errorRFIDMQTT(uint8_t *id,  uint8_t *err);
 uint8_t entryCard(void) ;
 
 uint8_t delCard(void);
+void openDoorMG995(void);
+void closeDoorMG995(void);
+void alarmSuccess(void);
+void alarmError(void);
 #endif
 

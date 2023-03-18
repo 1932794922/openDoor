@@ -7,25 +7,25 @@
 #include "delay.h"
 #include "RC522.h"
 #include "as608.h"
+#include "tim.h"
 
 //开门动作
 void openDoorForMQTT(char *data) {
     if (strcmp(data, "open") == 0) {
-        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
         uint8_t str[32];
         sprintf((char *) str, "指令开启成功");
         LCD_Fill(0, 100, lcddev.width, 160, BLACK);
         Show_Str_Mid(0, 100, (uint8_t *) str, 16, 240);
+        openDoorMG995();
         //发送MQTT到服务器
         usart_printf_dma(&ESP_UART,
                          "%c{\"topic\":\"%s\",\"data\":{\"message\":\"open the door\",\"status\":1,\"type\":\"%s\"}}%c",
                          FRAME_HEAD, DEFAULT_PUB_TOPIC, TYPE_COMMAND, FRAME_TAIL);
-
-        // 延时3秒
-        delay_ms(3000);
-        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
+//        usart_printf(&DEBUG_UART,
+//                         "%c{\"topic\":\"%s\",\"data\":{\"message\":\"open the door\",\"status\":1,\"type\":\"%s\"}}%c",
+//                         FRAME_HEAD, DEFAULT_PUB_TOPIC, TYPE_COMMAND, FRAME_TAIL);
     } else if (strcmp(data, "close") == 0) {
-        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
+        closeDoorMG995();
         uint8_t str[32];
         sprintf((char *) str, "指令关闭成功");
         LCD_Fill(0, 100, lcddev.width, 160, BLACK);
@@ -51,6 +51,7 @@ void openDoorRC522(uint16_t nms, uint8_t *id, uint8_t *openType) {
     sprintf((char *) str, "刷卡开启成功");
     LCD_Fill(0, 100, lcddev.width, 160, BLACK);
     Show_Str_Mid(0, 100, (uint8_t *) str, 16, 240);
+    openDoorMG995();
     //发送MQTT到服务器
     usart_printf_dma(&ESP_UART,
                      "%c{\"topic\":\"%s\",\"data\":{\"message\":\"%s\",\"status\":1,\"type\":\"%s\",\"id\":\"%s\"}}%c",
@@ -60,7 +61,6 @@ void openDoorRC522(uint16_t nms, uint8_t *id, uint8_t *openType) {
 //                 FRAME_HEAD, DEFAULT_PUB_TOPIC, openType, TYPE_RFID, id, FRAME_TAIL);
     // 延时3秒
     delay_ms(nms);
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
     LCD_Fill(0, 100, lcddev.width, 160, BLACK);
 }
 
@@ -129,6 +129,7 @@ void Read_IDcard(void) {
             usart_printf(&DEBUG_UART, "ID卡冲撞错误\r\n");
             LCD_Fill(0, 100, lcddev.width, 160, BLACK);
             Show_Str_Mid(0, 100, (uint8_t *) "ID卡冲撞", 16, 240);
+            alarmError();
             return;
         }
         usart_printf(&DEBUG_UART, "ID编号为:%02X %02X %02X %02X\r\n", Card_ID[0], Card_ID[1], Card_ID[2],
@@ -139,6 +140,7 @@ void Read_IDcard(void) {
         status = PcdSelect(Card_ID);  //选卡 如果成功返回MI_OK
         if (status != MI_OK) {
             usart_printf(&DEBUG_UART, "选卡失败\r\n");
+            alarmError();
             return;
         }
         // 密码验证
@@ -242,6 +244,7 @@ void errorRFIDMQTT(uint8_t *id, uint8_t *err) {
     usart_printf(&DEBUG_UART,
                  "%c{\"topic\":\"%s\",\"data\":{\"message\":\"%s\",\"status\":0,\"type\":\"%s\",\"id\":\"%s\"}}%c",
                  FRAME_HEAD, DEFAULT_PUB_TOPIC, err, TYPE_RFID, id, FRAME_TAIL);
+    alarmError();
 }
 
 /**
@@ -263,6 +266,7 @@ uint8_t entryCard(void) {
             usart_printf(&DEBUG_UART, "ID卡冲撞错误\r\n");
             LCD_Fill(0, 100, lcddev.width, 160, BLACK);
             Show_Str_Mid(0, 100, (uint8_t *) "ID卡冲撞", 16, 240);
+            alarmError();
             return 0;
         }
         usart_printf(&DEBUG_UART, "ID编号为:%02X %02X %02X %02X\r\n", Card_ID[0], Card_ID[1], Card_ID[2],
@@ -279,6 +283,7 @@ uint8_t entryCard(void) {
         status = PcdAuthState(PICC_AUTHENT1B, 2, Card_KEY, Card_ID);//验证卡密码 如果成功返回MI_OK
         if (status != MI_OK) {
             usart_printf(&DEBUG_UART, "三次密码验证失败\r\n");
+            alarmError();
         }
         //修改密码
         status = changePassword(1, DEFAULT_PASSWORD);
@@ -294,6 +299,7 @@ uint8_t entryCard(void) {
         Show_Str_Mid(0, 100, (uint8_t *) "录入成功", 16, 240);
         delay_ms(1000);
         LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+        alarmSuccess();
         //卡片进入休眠状态
         status = PcdHalt();
         if (status != MI_OK) {
@@ -322,6 +328,7 @@ uint8_t delCard(void) {
             usart_printf(&DEBUG_UART, "ID卡冲撞错误\r\n");
             LCD_Fill(0, 100, lcddev.width, 160, BLACK);
             Show_Str_Mid(0, 100, (uint8_t *) "ID卡冲撞", 16, 240);
+            alarmError();
             return 0;
         }
         usart_printf(&DEBUG_UART, "ID编号为:%02X %02X %02X %02X\r\n", Card_ID[0], Card_ID[1], Card_ID[2],
@@ -338,17 +345,20 @@ uint8_t delCard(void) {
         status = PcdAuthState(PICC_AUTHENT1B, 2, Card_KEY, Card_ID);//验证卡密码 如果成功返回MI_OK
         if (status != MI_OK) {
             usart_printf(&DEBUG_UART, "三次密码验证失败\r\n");
+            alarmError();
         }
         //修改密码
         status = changePassword(1, DELETE_PASSWORD);
         if (status != MI_OK) {
             usart_printf(&DEBUG_UART, "修改密码失败\r\n");
+            alarmError();
             return 0;
         }
         LCD_Fill(0, 100, lcddev.width, 160, BLACK);
         Show_Str_Mid(0, 100, (uint8_t *) "删除成功", 16, 240);
         delay_ms(1000);
         LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+        alarmSuccess();
         //卡片进入休眠状态
         status = PcdHalt();
         if (status != MI_OK) {
@@ -358,4 +368,46 @@ uint8_t delCard(void) {
         return 1;
     }
 
+}
+
+
+void TIM_SetCompare1(TIM_TypeDef *TIMx, uint16_t Compare1) {
+    TIMx->CCR1 = Compare1;
+}
+
+//舵机开门
+void openDoorMG995(void) {
+    alarmSuccess();
+    TIM_SetCompare1(TIM4, 20);
+    delay_ms(1000);
+    TIM_SetCompare1(TIM4, 10);
+}
+
+//舵机关门
+void closeDoorMG995(void) {
+    TIM_SetCompare1(TIM4, 10);
+    alarmSuccess();
+
+}
+
+//蜂鸣器报警
+void alarmSuccess(void) {
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
+    delay_ms(100);
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
+    delay_ms(100);
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
+    delay_ms(100);
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
+}
+
+
+void alarmError(void) {
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
+    delay_ms(500);
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
+    delay_ms(500);
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
+    delay_ms(500);
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
 }

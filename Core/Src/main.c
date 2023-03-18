@@ -38,6 +38,7 @@
 #include "string.h"
 #include "stdio.h"
 #include "RC522.h"
+#include "funHandle.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -107,12 +108,18 @@ int main(void)
   MX_USART2_UART_Init();
   MX_FMC_Init();
   MX_SPI1_Init();
+  MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
 
     /* USER CODE BEGIN 2 */
 
     //usart_printf(&huart1, "AS608指纹模块测试开始\r\n");
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
     HAL_TIM_Base_Start_IT(&htim2); //1ms
+    //开启通道1
+    HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
+    //舵机初始化
+    TIM4->CCR1 = 10;
     HAL_UART_Receive_IT(&huart1, (uint8_t *) &huart1_buf, 1);
     HAL_UART_Receive_DMA(&huart2, (uint8_t *) &huart2_buf, 1);
     HAL_UART_Receive_IT(&huart3, (uint8_t *) &huart3_buf, 1);
@@ -147,8 +154,6 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
         Scheduler_Run();
-
-
     }
 
   /* USER CODE END 3 */

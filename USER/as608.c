@@ -9,6 +9,7 @@
 #include "AS608HARD.h"
 #include "ESP8266.h"
 #include "cJSON.h"
+#include "funHandle.h"
 
 
 /*串口接收中断处理在stm32f1xx_it.c里面*/
@@ -741,6 +742,8 @@ void ShowErrMessage(uint8_t ensure) {
     sendMQTTHaveTopic(DEFAULT_PUB_TOPIC, json_string);
     free(json_string);
     cJSON_Delete(data);
+    alarmError();
+
 }
 
 
@@ -864,6 +867,7 @@ void Add_FR(void) {
                     delay_ms(1500);
                     LCD_Fill(0, 100, lcddev.width, 160, BLACK);
                     LCD_Fill(0, 120, lcddev.width, 160, BLACK);
+                    alarmSuccess();
                     return;
                 } else {
                     processnum = 0;
@@ -917,6 +921,7 @@ void press_FR(void) {
                 cJSON_AddStringToObject(data, "message", "open the door");
                 char *json_string = cJSON_PrintUnformatted(data);
                 sendMQTTHaveTopic(DEFAULT_PUB_TOPIC, json_string);
+                openDoorMG995();
                 free(json_string);
                 cJSON_Delete(data);
             } else {
@@ -960,13 +965,17 @@ void Del_FR(void) {
         sprintf((char *) str, "清空指纹库成功");
         Show_Str_Mid(0, 140, (uint8_t *) str, 16, 240);
         usart_printf(&DEBUG_UART, "删除指纹成功 \r\n");
+        alarmSuccess();
     } else if (ensure == 0) {
         sprintf((char *) str, "删除指纹成功ID: %d", ID_NUM);
         LCD_Fill(0, 80, lcddev.width, 160, BLACK);
         Show_Str_Mid(0, 140, (uint8_t *) str, 16, 240);
         usart_printf(&DEBUG_UART, "删除指纹成功 \r\n");
-    } else
+        alarmSuccess();
+    } else {
         ShowErrMessage(ensure);
+
+    }
 
     delay_ms(1200);
     PS_ValidTempleteNum(&ValidN); //读库指纹个数
