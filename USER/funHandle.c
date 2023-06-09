@@ -14,7 +14,7 @@ void openDoorForMQTT(char *data) {
     if (strcmp(data, "open") == 0) {
         uint8_t str[32];
         sprintf((char *) str, "指令开启成功");
-        LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+        LCD_Fill(0, 100, lcddev.width, 160, WHITE);
         Show_Str_Mid(0, 100, (uint8_t *) str, 16, 240);
         openDoorMG995();
         //发送MQTT到服务器
@@ -28,7 +28,7 @@ void openDoorForMQTT(char *data) {
         closeDoorMG995();
         uint8_t str[32];
         sprintf((char *) str, "指令关闭成功");
-        LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+        LCD_Fill(0, 100, lcddev.width, 160, WHITE);
         Show_Str_Mid(0, 100, (uint8_t *) str, 16, 240);
         //发送MQTT到服务器
         usart_printf_dma(&ESP_UART,
@@ -36,7 +36,7 @@ void openDoorForMQTT(char *data) {
                          FRAME_HEAD, DEFAULT_PUB_TOPIC, TYPE_COMMAND, FRAME_TAIL);
     }
 
-    LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+    LCD_Fill(0, 100, lcddev.width, 160, WHITE);
 
 }
 
@@ -49,7 +49,7 @@ void openDoorRC522(uint16_t nms, uint8_t *id, uint8_t *openType) {
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
     uint8_t str[32];
     sprintf((char *) str, "刷卡开启成功");
-    LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+    LCD_Fill(0, 100, lcddev.width, 160, WHITE);
     Show_Str_Mid(0, 100, (uint8_t *) str, 16, 240);
     openDoorMG995();
     //发送MQTT到服务器
@@ -61,7 +61,7 @@ void openDoorRC522(uint16_t nms, uint8_t *id, uint8_t *openType) {
 //                 FRAME_HEAD, DEFAULT_PUB_TOPIC, openType, TYPE_RFID, id, FRAME_TAIL);
     // 延时3秒
     delay_ms(nms);
-    LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+    LCD_Fill(0, 100, lcddev.width, 160, WHITE);
 }
 
 uint8_t DEFAULT_PASSWORD[16] = {    /*!< 用于每个扇区密码块读写*/
@@ -123,11 +123,11 @@ void Read_IDcard(void) {
                 sprintf((char *) cardTypeStr, "unknown");
                 break;
         }
-        LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+        LCD_Fill(0, 100, lcddev.width, 160, WHITE);
         status = PcdAnticoll(Card_ID);  //防冲撞 如果成功返回MI_OK
         if (status != MI_OK) {
             usart_printf(&DEBUG_UART, "ID卡冲撞错误\r\n");
-            LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+            LCD_Fill(0, 100, lcddev.width, 160, WHITE);
             Show_Str_Mid(0, 100, (uint8_t *) "ID卡冲撞", 16, 240);
             alarmError();
             return;
@@ -150,7 +150,7 @@ void Read_IDcard(void) {
             // usart_printf(&DEBUG_UART, "开始进行ID卡判断\r\n");
             if (!authStateNFC(Card_ID)) {
                 usart_printf(&DEBUG_UART, "无效卡\r\n");
-                LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+                LCD_Fill(0, 100, lcddev.width, 160, WHITE);
                 Show_Str_Mid(0, 100, (uint8_t *) "无效卡", 16, 240);
                 errorRFIDMQTT(ids, (uint8_t *) "invalid card");
                 return;
@@ -177,7 +177,7 @@ void Read_IDcard(void) {
         if (status != MI_OK) {
             // usart_printf(&DEBUG_UART, "读取扇区2密码数据失败\r\n");
             usart_printf(&DEBUG_UART, "无效卡\r\n");
-            LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+            LCD_Fill(0, 100, lcddev.width, 160, WHITE);
             Show_Str_Mid(0, 100, (uint8_t *) "无效卡", 16, 240);
             errorRFIDMQTT(ids, (uint8_t *) "invalid card");
             return;
@@ -185,7 +185,7 @@ void Read_IDcard(void) {
         // 比较前6个字节是否相同
         if (memcmp(Card_Data, DEFAULT_PASSWORD, 6) != 0) {
             // usart_printf(&DEBUG_UART, "密码验证失败\r\n");
-            LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+            LCD_Fill(0, 100, lcddev.width, 160, WHITE);
             Show_Str_Mid(0, 100, (uint8_t *) "密码验证失败", 16, 240);
             errorRFIDMQTT(ids, (uint8_t *) "password verification failed");
             return;
@@ -255,16 +255,16 @@ uint8_t entryCard(void) {
     uint8_t status;  //状态
     uint8_t Card_ID[4];
     uint8_t Card_Data[20];
-    LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+    LCD_Fill(0, 100, lcddev.width, 160, WHITE);
     Show_Str_Mid(0, 100, (uint8_t *) "请放ID卡", 16, 240);
 
     if (MI_OK == PcdRequest(0x52, Card_Type))  //寻卡函数，如果成功返回 MI_OK  打印多次卡号
     {
-        LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+        LCD_Fill(0, 100, lcddev.width, 160, WHITE);
         status = PcdAnticoll(Card_ID);  //防冲撞 如果成功返回MI_OK
         if (status != MI_OK) {
             usart_printf(&DEBUG_UART, "ID卡冲撞错误\r\n");
-            LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+            LCD_Fill(0, 100, lcddev.width, 160, WHITE);
             Show_Str_Mid(0, 100, (uint8_t *) "ID卡冲撞", 16, 240);
             alarmError();
             return 0;
@@ -295,10 +295,10 @@ uint8_t entryCard(void) {
         PcdRead(2, Card_Data);
         usart_printf(&DEBUG_UART, "读取:%s\r\n", Card_Data);
 
-        LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+        LCD_Fill(0, 100, lcddev.width, 160, WHITE);
         Show_Str_Mid(0, 100, (uint8_t *) "录入成功", 16, 240);
         delay_ms(1000);
-        LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+        LCD_Fill(0, 100, lcddev.width, 160, WHITE);
         alarmSuccess();
         //卡片进入休眠状态
         status = PcdHalt();
@@ -318,15 +318,15 @@ uint8_t delCard(void) {
     uint8_t Card_KEY[16] = {0xff, 0xff, 0xff, 0xff, 0xff, 0xff};    //{0x11,0x11,0x11,0x11,0x11,0x11};
     uint8_t status;  //状态
     uint8_t Card_ID[4];
-    LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+    LCD_Fill(0, 100, lcddev.width, 160, WHITE);
     Show_Str_Mid(0, 100, (uint8_t *) "请放ID卡", 16, 240);
     if (MI_OK == PcdRequest(0x52, Card_Type))  //寻卡函数，如果成功返回 MI_OK  打印多次卡号
     {
-        LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+        LCD_Fill(0, 100, lcddev.width, 160, WHITE);
         status = PcdAnticoll(Card_ID);  //防冲撞 如果成功返回MI_OK
         if (status != MI_OK) {
             usart_printf(&DEBUG_UART, "ID卡冲撞错误\r\n");
-            LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+            LCD_Fill(0, 100, lcddev.width, 160, WHITE);
             Show_Str_Mid(0, 100, (uint8_t *) "ID卡冲撞", 16, 240);
             alarmError();
             return 0;
@@ -354,10 +354,10 @@ uint8_t delCard(void) {
             alarmError();
             return 0;
         }
-        LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+        LCD_Fill(0, 100, lcddev.width, 160, WHITE);
         Show_Str_Mid(0, 100, (uint8_t *) "删除成功", 16, 240);
         delay_ms(1000);
-        LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+        LCD_Fill(0, 100, lcddev.width, 160, WHITE);
         alarmSuccess();
         //卡片进入休眠状态
         status = PcdHalt();

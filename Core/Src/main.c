@@ -124,31 +124,31 @@ int main(void)
     HAL_UART_Receive_DMA(&huart2, (uint8_t *) &huart2_buf, 1);
     HAL_UART_Receive_IT(&huart3, (uint8_t *) &huart3_buf, 1);
     LCD_Init();      //LCD初始化
-    LCD_Clear(BLACK);//清屏 LIGHTGREEN
+    LCD_Clear(WHITE);//清屏 LIGHTGREEN
     tp_dev.init();     //触摸屏初始化
     Scheduler_Setup();      //调度器初始化
 
     if (!as608_init()) {
         // usart_printf(&huart1, "AS608指纹模块初始化成功\r\n");
-        LCD_ShowString(50, 20, (uint8_t *) "指纹模块初始化成功", RED, BLACK); //显示清屏区域
+        LCD_ShowString(50, 20, (uint8_t *) "指纹模块初始化成功", RED, WHITE); //显示清屏区域
     } else {
-        LCD_Fill(0, 20, 240, 40, BLACK);
+        LCD_Fill(0, 20, 240, 40, WHITE);
         //usart_printf(&huart1, "AS608指纹模块初始化失败\r\n");
-        LCD_ShowString(50, 20, (uint8_t *) "指纹模块初始化失败", RED, BLACK); //显示清屏区域
+        LCD_ShowString(50, 20, (uint8_t *) "指纹模块初始化失败", RED, WHITE); //显示清屏区域
     }
     delay_ms(1000);
     RC522_Init();  //初始化RC522
     usart_printf(&DEBUG_UART, "RC522初始化完成\r\n");
-    LCD_Clear(BLACK);//清屏 LIGHTGREEN
+    LCD_Clear(WHITE);//清屏 LIGHTGREEN
     LCD_AS608_UI();
     LCD_RC522_UI();
     AS608_load_keyboard(0, 170, (uint8_t **) kbd_menu); //加载虚拟键盘
     //LCD_show();
 
-  /* USER CODE END 2 */
+    /* USER CODE END 2 */
 
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
+    /* Infinite loop */
+    /* USER CODE BEGIN WHILE */
     while (1) {
     /* USER CODE END WHILE */
 

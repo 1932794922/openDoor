@@ -20,7 +20,7 @@ void AS608_key_staset(uint16_t x, uint16_t y, uint8_t keyx, uint8_t sta)
 	if (sta && keyx != 1) //按键表第2个‘:’不需要清除
 		LCD_Fill(x + j * 80 + 1, y + i * 30 + 1, x + j * 80 + 78, y + i * 30 + 28, GREEN);
 	else if (keyx != 1)
-		LCD_Fill(x + j * 80 + 1, y + i * 30 + 1, x + j * 80 + 78, y + i * 30 + 28, BLACK);
+		LCD_Fill(x + j * 80 + 1, y + i * 30 + 1, x + j * 80 + 78, y + i * 30 + 28, WHITE);
 	if (keyx != 1) //不是‘：’
 		Show_Str_Mid(x + j * 80, y + 7 + 30 * i, (uint8_t *)kbd_tbl[keyx], 16, 80);
 }
@@ -48,7 +48,7 @@ uint16_t GET_NUM(void)
 			if (key_num == 15)
 				return num; //‘Enter’键
 		}
-		LCD_ShowNum(80 + 15, 170 + 7, num, 6, 16, RED, BLACK);
+        LCD_ShowNum(80 + 15, 170 + 7, num, 6, 16, RED, WHITE);
 	}
 }
 

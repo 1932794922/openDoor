@@ -52,10 +52,10 @@ void LCD_RC522_Scan(void) {
         {
             if (tp_dev.x[0] > 180 && tp_dev.x[0] < 240 && tp_dev.y[0] > 20 && tp_dev.y[0] < 60) {
                 //点击了录卡
-                LCD_Clear(BLACK);//清屏
-                LCD_ShowString(54, 0, (uint8_t *) "----正在录卡----", RED, BLACK);
+                LCD_Clear(WHITE);//清屏
+                LCD_ShowString(54, 0, (uint8_t *) "----正在录卡----", RED, WHITE);
                 LCD_DrawRectangle(100, 20, 160, 60, RED);
-                LCD_ShowString(115, 32, (uint8_t *) "HOME", RED, BLACK);
+                LCD_ShowString(115, 32, (uint8_t *) "HOME", RED, WHITE);
                 rC522Flag = 1; //执行录卡
                 while (tp_dev.x[0] > 180 && tp_dev.x[0] < 240 && tp_dev.y[0] > 20 && tp_dev.y[0] < 60) //松手检测
                 {
@@ -65,10 +65,10 @@ void LCD_RC522_Scan(void) {
 
             if (tp_dev.x[0] > 0 && tp_dev.x[0] < 60 && tp_dev.y[0] > 20 && tp_dev.y[0] < 60) {
                 //点击了删卡
-                LCD_Clear(BLACK);//清屏
-                LCD_ShowString(54, 0, (uint8_t *) "----正在删卡----", RED, BLACK);
+                LCD_Clear(WHITE);//清屏
+                LCD_ShowString(54, 0, (uint8_t *) "----正在删卡----", RED, WHITE);
                 LCD_DrawRectangle(100, 20, 160, 60, RED);
-                LCD_ShowString(115, 32, (uint8_t *) "HOME", RED, BLACK);
+                LCD_ShowString(115, 32, (uint8_t *) "HOME", RED, WHITE);
                 rC522Flag = 2; //执行录卡
                 while (tp_dev.x[0] > 0 && tp_dev.x[0] < 60 && tp_dev.y[0] > 20 && tp_dev.y[0] < 60) //松手检测
                 {
@@ -78,7 +78,7 @@ void LCD_RC522_Scan(void) {
 
             if (tp_dev.x[0] > 100 && tp_dev.x[0] < 160 && tp_dev.y[0] > 20 && tp_dev.y[0] < 60) {
                 //点击了Home
-                LCD_Clear(BLACK);//清屏
+                LCD_Clear(WHITE);//清屏
                 AS608_load_keyboard(0, 170, (uint8_t **) kbd_menu); //加载虚拟键盘
                 LCD_RC522_UI();
                 LCD_AS608_UI();
@@ -101,8 +101,8 @@ void LCD_RC522_Scan(void) {
 void LCD_RC522_UI(void) {
     LCD_DrawRectangle(180, 20, lcddev.width, 50, RED);
     LCD_DrawRectangle(0, 20, 60, 50, RED);
-    LCD_ShowString(200, 28, (uint8_t *) "录卡", RED, BLACK);
-    LCD_ShowString(10, 28, (uint8_t *) "删卡", RED, BLACK);
+    LCD_ShowString(200, 28, (uint8_t *) "录卡", RED, WHITE);
+    LCD_ShowString(10, 28, (uint8_t *) "删卡", RED, WHITE);
 }
 
 /**
@@ -113,7 +113,7 @@ void LCD_AS608_UI(void) {
     uint8_t ensure;
     uint16_t ValidN;
     //模块内有效指纹个数
-    LCD_ShowString(54, 0, (uint8_t *) "----门禁系统----", RED, BLACK);
+    LCD_ShowString(54, 0, (uint8_t *) "----门禁系统----", RED, WHITE);
     ensure = PS_ValidTempleteNum(&ValidN); //读库指纹个数
     if (ensure != 0x00) {
         //ShowErrMessage(ensure);             //显示确认码错误信息
@@ -121,7 +121,7 @@ void LCD_AS608_UI(void) {
     ensure = PS_ReadSysPara(&AS608Para); //读参数
     if (ensure == 0x00) {
         sprintf((char *) str, "库容量:%d", AS608Para.PS_max - ValidN);
-        LCD_ShowString(8, 60, (uint8_t *) str, RED, BLACK);
+        LCD_ShowString(8, 60, (uint8_t *) str, RED, WHITE);
     } else {
         //ShowErrMessage(ensure);
     }
@@ -134,14 +134,14 @@ void AS608_load_keyboard(uint16_t x, uint16_t y, uint8_t **kbtbl) {
     uint16_t i;
     POINT_COLOR = RED;
     kbd_tbl = kbtbl;
-    LCD_Fill(x, y, x + 240, y + 150, BLACK);
+    LCD_Fill(x, y, x + 240, y + 150, WHITE);
     LCD_DrawRectangle(x, y, x + 240, y + 150, RED);
     LCD_DrawRectangle(x + 80, y, x + 160, y + 150, RED);
     LCD_DrawRectangle(x, y + 30, x + 240, y + 60, RED);
     LCD_DrawRectangle(x, y + 90, x + 240, y + 120, RED);
     for (i = 0; i < 15; i++) {
         if (i == 1) //按键表第2个‘:’不需要中间显示
-            LCD_ShowString(x + (i % 3) * 80 + 2, y + 7 + 30 * (i / 3), (uint8_t *) kbd_tbl[i], RED, BLACK);
+            LCD_ShowString(x + (i % 3) * 80 + 2, y + 7 + 30 * (i / 3), (uint8_t *) kbd_tbl[i], RED, WHITE);
         else
             Show_Str_Mid(x + (i % 3) * 80, y + 7 + 30 * (i / 3), (uint8_t *) kbd_tbl[i], 16, 80);
     }

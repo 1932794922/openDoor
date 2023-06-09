@@ -2543,7 +2543,7 @@ void LCD_Init(void)
 		LCD_WriteReg(0X07,0X0133);   
 	}	 
 	LCD_Display_Dir(0);		 	//默认为竖屏
-//	LCD_Clear(BLACK);
+//	LCD_Clear(WHITE);
 }
 
 //清屏函数
@@ -3005,12 +3005,11 @@ void Show_Str_Mid(uint16_t x,uint16_t y,uint8_t* str,uint8_t size,uint8_t len)
 	uint16_t strlenth=0;
    	strlenth=strlen((const char*)str);
 	strlenth*=size/2;
-	if(strlenth>len)LCD_ShowString(x,y,str,RED,BLACK);
-	else
-	{
-		strlenth=(len-strlenth)/2;
-	    LCD_ShowString(strlenth+x,y,str,RED,BLACK);
-	}
+    if (strlenth > len)LCD_ShowString(x, y, str, RED, WHITE);
+    else {
+        strlenth = (len - strlenth) / 2;
+        LCD_ShowString(strlenth + x, y, str, RED, WHITE);
+    }
 }   
 
 

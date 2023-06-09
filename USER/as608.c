@@ -731,8 +731,8 @@ const char *EnsureMessage(uint8_t ensure) {
 
 //显示确认码错误信息
 void ShowErrMessage(uint8_t ensure) {
-    LCD_Fill(0, 100, lcddev.width, 160, BLACK);
-    LCD_ShowString(80, 100, (uint8_t *) EnsureMessage(ensure), RED, BLACK); //80,100
+    LCD_Fill(0, 100, lcddev.width, 160, WHITE);
+    LCD_ShowString(80, 100, (uint8_t *) EnsureMessage(ensure), RED, WHITE); //80,100
     usart_printf(&DEBUG_UART, "%s\r\n", EnsureMessage(ensure));
     cJSON *data = cJSON_CreateObject();
     cJSON_AddStringToObject(data, "type", TYPE_FINGERTIP);
@@ -760,14 +760,14 @@ void Add_FR(void) {
             case 0:
                 i++;
                 //usart_printf(&DEBUG_UART, "请按录入指纹\r\n");
-                LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+                LCD_Fill(0, 100, lcddev.width, 160, WHITE);
                 Show_Str_Mid(0, 100, (uint8_t *) "请按录入指纹", 16, 240);
                 ensure = PS_GetImage();
                 if (ensure == 0x00) {
                     ensure = PS_GenChar(CharBuffer1); //生成特征
                     if (ensure == 0x00) {
                         //usart_printf(&DEBUG_UART, "指纹正常\r\n");
-                        LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+                        LCD_Fill(0, 100, lcddev.width, 160, WHITE);
                         Show_Str_Mid(0, 100, (uint8_t *) "指纹正常", 16, 240);
                         i = 0;
                         processnum = 1; //跳到第二步
@@ -784,7 +784,7 @@ void Add_FR(void) {
             case 1:
                 i++;
                 // usart_printf(&DEBUG_UART, "请再按一次\r\n");
-                LCD_Fill(0, 120, lcddev.width, 160, BLACK);
+                LCD_Fill(0, 120, lcddev.width, 160, WHITE);
                 Show_Str_Mid(0, 120, (uint8_t *) "请再按一次", 16, 240);
                 ensure = PS_GetImage();
                 delay_ms(500);
@@ -792,8 +792,8 @@ void Add_FR(void) {
                     ensure = PS_GenChar(CharBuffer2); //生成特征
                     if (ensure == 0x00) {
                         // usart_printf(&DEBUG_UART, "指纹正常\r\n");
-                        LCD_Fill(0, 100, lcddev.width, 160, BLACK);
-                        LCD_Fill(0, 120, lcddev.width, 160, BLACK);
+                        LCD_Fill(0, 100, lcddev.width, 160, WHITE);
+                        LCD_Fill(0, 120, lcddev.width, 160, WHITE);
                         Show_Str_Mid(0, 100, (uint8_t *) "指纹正常", 16, 240);
                         i = 0;
                         processnum = 2; //跳到第三步
@@ -807,18 +807,18 @@ void Add_FR(void) {
                 break;
             case 2:
                 // usart_printf(&DEBUG_UART, "对比两次指纹\r\n");
-                LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+                LCD_Fill(0, 100, lcddev.width, 160, WHITE);
                 Show_Str_Mid(0, 100, (uint8_t *) "对比两次指纹", 16, 240);
                 ensure = PS_Match();
                 delay_ms(500);
                 if (ensure == 0x00) {
                     // usart_printf(&DEBUG_UART, "对比成功\r\n");
-                    LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+                    LCD_Fill(0, 100, lcddev.width, 160, WHITE);
                     Show_Str_Mid(0, 100, (uint8_t *) "对比成功", 16, 240);
                     processnum = 3; //跳到第四步
                 } else {
                     // usart_printf(&DEBUG_UART, "对比失败\r\n");
-                    LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+                    LCD_Fill(0, 100, lcddev.width, 160, WHITE);
                     Show_Str_Mid(0, 100, (uint8_t *) "对比失败", 16, 240);
                     ShowErrMessage(ensure);
                     i = 0;
@@ -830,14 +830,14 @@ void Add_FR(void) {
 
             case 3:
                 //usart_printf(&DEBUG_UART, "生成指纹模板\r\n");
-                LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+                LCD_Fill(0, 100, lcddev.width, 160, WHITE);
                 Show_Str_Mid(0, 100, (uint8_t *) "生成指纹模板", 16, 240);
                 delay_ms(500);
                 ensure = PS_RegModel();
 
                 if (ensure == 0x00) {
                     // usart_printf(&DEBUG_UART, "生成指纹模板成功\r\n");
-                    LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+                    LCD_Fill(0, 100, lcddev.width, 160, WHITE);
                     Show_Str_Mid(0, 100, (uint8_t *) "生成指纹模板成功", 16, 240);
                     processnum = 4; //跳到第五步
                 } else {
@@ -849,7 +849,7 @@ void Add_FR(void) {
                 break;
 
             case 4:
-                LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+                LCD_Fill(0, 100, lcddev.width, 160, WHITE);
                 Show_Str_Mid(0, 100, (uint8_t *) "请输入储存ID,按Enter保存", 16, 240);
                 Show_Str_Mid(0, 120, (uint8_t *) "0=< ID <=299", 16, 240);
                 do {
@@ -858,15 +858,15 @@ void Add_FR(void) {
                 ensure = PS_StoreChar(CharBuffer2, ID_NUM); //储存模板
                 if (ensure == 0x00) {
                     uint16_t ValidN;
-                    LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+                    LCD_Fill(0, 100, lcddev.width, 160, WHITE);
                     uint8_t str[32];
                     sprintf((char *) str, "录入指纹成功 ID: %d", ID_NUM);
                     Show_Str_Mid(0, 100, (uint8_t *) str, 16, 240);
                     PS_ValidTempleteNum(&ValidN); //读库指纹个数
-                    LCD_ShowNum(64, 60, AS608Para.PS_max - ValidN, 3, 16, RED, BLACK);
+                    LCD_ShowNum(64, 60, AS608Para.PS_max - ValidN, 3, 16, RED, WHITE);
                     delay_ms(1500);
-                    LCD_Fill(0, 100, lcddev.width, 160, BLACK);
-                    LCD_Fill(0, 120, lcddev.width, 160, BLACK);
+                    LCD_Fill(0, 100, lcddev.width, 160, WHITE);
+                    LCD_Fill(0, 120, lcddev.width, 160, WHITE);
                     alarmSuccess();
                     return;
                 } else {
@@ -881,7 +881,7 @@ void Add_FR(void) {
 
         if (i >= 5) //超过5次没有按手指则退出
         {
-            LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+            LCD_Fill(0, 100, lcddev.width, 160, WHITE);
             break;
         }
     }
@@ -906,8 +906,8 @@ void press_FR(void) {
 
             if (ensure == 0x00) //搜索成功
             {
-                //LCD_Clear(BLACK);//清屏 LIGHTGREEN
-                LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+                //LCD_Clear(WHITE);//清屏 LIGHTGREEN
+                LCD_Fill(0, 100, lcddev.width, 160, WHITE);
                 uint8_t str[32];
                 sprintf((char *) str, "验证成功:ID:%d", seach.pageID);
                 //usart_printf(&DEBUG_UART, "指纹验证成功:  ID:%d 得分:%d\r\n ", seach.pageID, seach.mathscore);
@@ -935,7 +935,7 @@ void press_FR(void) {
 
         //usart_printf(&DEBUG_UART, "请按指纹\r\n");
         delay_ms(1500);
-        LCD_Fill(0, 100, lcddev.width, 160, BLACK);
+        LCD_Fill(0, 100, lcddev.width, 160, WHITE);
         Show_Str_Mid(0, 100, (uint8_t *) "请按指纹", 16, 240);
     }
 
@@ -946,7 +946,7 @@ void Del_FR(void) {
     uint8_t str[32];
     uint8_t ensure;
     uint16_t ID_NUM = 0;
-    LCD_Fill(0, 80, lcddev.width, 160, BLACK);
+    LCD_Fill(0, 80, lcddev.width, 160, WHITE);
     Show_Str_Mid(0, 120, (uint8_t *) "请输入指纹ID,按Enter发送", 16, 240);
     Show_Str_Mid(0, 140, (uint8_t *) "0=< ID <=299", 16, 240);
     delay_ms(50);
@@ -961,14 +961,14 @@ void Del_FR(void) {
         ensure = PS_DeletChar(ID_NUM, 1); //删除单个指纹
 
     if (ensure == 0 && ID_NUM == 0xFF00) {
-        LCD_Fill(0, 80, lcddev.width, 160, BLACK);
+        LCD_Fill(0, 80, lcddev.width, 160, WHITE);
         sprintf((char *) str, "清空指纹库成功");
         Show_Str_Mid(0, 140, (uint8_t *) str, 16, 240);
         usart_printf(&DEBUG_UART, "删除指纹成功 \r\n");
         alarmSuccess();
     } else if (ensure == 0) {
         sprintf((char *) str, "删除指纹成功ID: %d", ID_NUM);
-        LCD_Fill(0, 80, lcddev.width, 160, BLACK);
+        LCD_Fill(0, 80, lcddev.width, 160, WHITE);
         Show_Str_Mid(0, 140, (uint8_t *) str, 16, 240);
         usart_printf(&DEBUG_UART, "删除指纹成功 \r\n");
         alarmSuccess();
@@ -979,10 +979,10 @@ void Del_FR(void) {
 
     delay_ms(1200);
     PS_ValidTempleteNum(&ValidN); //读库指纹个数
-    LCD_ShowNum(64, 60, AS608Para.PS_max - ValidN, 3, 16, RED, BLACK);
+    LCD_ShowNum(64, 60, AS608Para.PS_max - ValidN, 3, 16, RED, WHITE);
 
     MENU:
-    LCD_Fill(0, 80, lcddev.width, 160, BLACK);
+    LCD_Fill(0, 80, lcddev.width, 160, WHITE);
     delay_ms(50);
     AS608_load_keyboard(0, 170, (uint8_t **) kbd_menu);
 
