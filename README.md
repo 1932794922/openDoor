@@ -8,7 +8,7 @@
 
 > 简介:本项目基于STM32F4系列单片机设计的智能门禁系统,涉及的模块有AS608指纹模块、RC522射频模块、ESP8266WIFI模块、舵机。设计到软件小程序以及后端代码整理好后在进行开源。
 >
->最后本项目对您有帮助的话，感谢大家帮忙点个小星星Star?
+>最后本项目对您有帮助的话，感谢大家帮忙点个小星星Star?，谢谢！
 
 ## 1.引脚说明
 
@@ -47,10 +47,12 @@ PD12 ----> 舵机
 
 ## 2.配置信息
 
-?**因为本项目是使用Clion开发,需要配置相应的开发环境.**
+?**本项目是使用Clion开发,需要配置相应的开发环境.**
 
 自行加文件时候需要再CMakeLists.txt添加相应的文件信息
 
+```
+#头文件
 include_directories(Core/Inc Drivers/STM32F4xx_HAL_Driver/Inc Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
 Drivers/CMSIS/Device/ST/STM32F4xx/Include Drivers/CMSIS/Include
 SYSTEM/
@@ -59,10 +61,11 @@ UTILS/
 )
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F427xx)
-
+#文件夹
 file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*"
 "SYSTEM/*.*" "USER/*.*" "UTILS/*.*"
 )
+```
 
 如果使用Keil开发无需配置,与传统开发没有任何区别,只是在使用STM32CubeMX生成项目代码选择Keil就可以
 
